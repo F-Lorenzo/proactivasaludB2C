@@ -12,20 +12,20 @@ const PILLAR_IMAGES: Record<string, { src: string; alt: string }> = {
     alt: 'Persona mayor de 50 preparando comida saludable en casa',
   },
   '02': {
-    src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=85',
-    alt: 'Adulto mayor de 50 realizando actividad física al aire libre',
+    src: 'https://images.unsplash.com/photo-1758798458635-f01402b40919?auto=format&fit=crop&w=600&q=85',
+    alt: 'Grupo de personas mayores de 50 haciendo ejercicio juntos en una plaza',
   },
   '03': {
-    src: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=85',
-    alt: 'Mujer mayor de 50 en un momento de calma y bienestar emocional',
+    src: 'https://images.unsplash.com/photo-1666101042631-b3f606363e98?auto=format&fit=crop&w=600&q=85',
+    alt: 'Señora mayor hablando con su psicólogo por videollamada desde casa',
   },
   '04': {
     src: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=85',
     alt: 'Adulto mayor recibiendo atención médica por teleconsulta desde su hogar',
   },
   '05': {
-    src: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=85',
-    alt: 'Grupo de adultos mayores de 50 en sesión de coaching grupal virtual',
+    src: 'https://images.unsplash.com/photo-1752700064245-caa940f9b6dc?auto=format&fit=crop&w=600&q=85',
+    alt: 'Grupo de adultos mayores de 50 compartiendo un momento juntos al aire libre',
   },
 }
 
