@@ -202,8 +202,8 @@ export function HealthStats() {
               {/* Main large photo */}
               <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=85"
-                  alt="Mujer mayor de 50 realizando actividad física al aire libre"
+                  src="https://images.unsplash.com/photo-1702648159782-712c96a07028?auto=format&fit=crop&w=800&q=85"
+                  alt="Mujer argentina mayor de 50 años trotando activamente en el parque"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 45vw"
