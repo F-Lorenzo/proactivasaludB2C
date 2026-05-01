@@ -173,8 +173,8 @@ export function Testimonials() {
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative aspect-[3/2] rounded-2xl overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=400&q=80"
-                    alt="Pareja argentina mayor de 50 cocinando saludable"
+                    src="https://images.unsplash.com/photo-1761055923163-517bc7a55c84?auto=format&fit=crop&w=400&q=80"
+                    alt="Dos mujeres argentinas mayores de 50 caminando juntas en el parque"
                     fill
                     className="object-cover"
                     sizes="200px"
@@ -182,8 +182,8 @@ export function Testimonials() {
                 </div>
                 <div className="relative aspect-[3/2] rounded-2xl overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=400&q=80"
-                    alt="Hombre argentino mayor de 50 activo al aire libre"
+                    src="https://images.unsplash.com/photo-1702648159730-00699257be79?auto=format&fit=crop&w=400&q=80"
+                    alt="Mujer argentina mayor de 50 años trotando activamente en el parque"
                     fill
                     className="object-cover"
                     sizes="200px"
