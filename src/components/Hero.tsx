@@ -1,16 +1,34 @@
 import Image from 'next/image'
-import { ChevronDown, CalendarDays } from 'lucide-react'
+import { ChevronDown, CalendarDays, Users } from 'lucide-react'
+
+const ACTIVITY_STRIP = [
+  {
+    src: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=400&q=80',
+    alt: 'Pareja argentina mayor de 50 cocinando juntos saludablemente',
+    label: 'Nutrición',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1571019614242-c5c5dee81285?auto=format&fit=crop&w=400&q=80',
+    alt: 'Adulto argentino mayor de 50 haciendo ejercicio físico',
+    label: 'Movimiento',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
+    alt: 'Persona argentina mayor de 50 en un momento de bienestar emocional',
+    label: 'Bienestar',
+  },
+]
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-surface pt-16">
+    <section className="relative min-h-screen flex flex-col overflow-hidden bg-surface pt-16">
       {/* Right-panel background tint */}
       <div
         aria-hidden="true"
         className="absolute inset-y-0 right-0 w-[45%] bg-brand-light/55 hidden lg:block"
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full py-20 lg:py-0">
+      <div className="relative flex-1 max-w-7xl mx-auto px-6 lg:px-8 w-full py-20 lg:py-0">
         <div className="grid lg:grid-cols-[55%_45%] items-center min-h-[calc(100vh-4rem)]">
 
           {/* ── Text ─────────────────────────────────────────────────────── */}
@@ -70,11 +88,11 @@ export function Hero() {
           <div className="relative hidden lg:flex items-center justify-center py-16">
             <div className="relative w-full max-w-sm">
 
-              {/* Hero photo — active mature adult outdoors */}
+              {/* Hero photo */}
               <div className="w-full aspect-[4/5] rounded-[2rem] overflow-hidden relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=85"
-                  alt="Persona activa mayor de 50 disfrutando al aire libre"
+                  src="https://images.unsplash.com/photo-1625725764771-663bbc578f2e?auto=format&fit=crop&w=600&q=85"
+                  alt="Pareja argentina mayor de 60 años haciendo ejercicio juntos al aire libre"
                   fill
                   className="object-cover"
                   priority
@@ -97,15 +115,65 @@ export function Hero() {
                 </span>
               </div>
 
+              {/* Participants badge — middle left */}
+              <div className="absolute top-1/2 -translate-y-1/2 -left-14 bg-white rounded-xl px-3 py-2.5 shadow-hover flex items-center gap-2">
+                <div className="flex -space-x-2">
+                  {[
+                    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=60&q=80',
+                    'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=60&q=80',
+                    'https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=60&q=80',
+                  ].map((src, i) => (
+                    <div key={i} className="w-7 h-7 rounded-full overflow-hidden border-2 border-white flex-shrink-0">
+                      <Image
+                        src={src}
+                        alt="Participante del programa"
+                        width={28}
+                        height={28}
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div>
+                  <p className="font-body text-xs font-bold text-ink leading-none">+50</p>
+                  <p className="font-body text-[10px] text-ink-soft leading-none mt-0.5">personas</p>
+                </div>
+              </div>
+
             </div>
           </div>
 
         </div>
       </div>
 
+      {/* ── Activity photo strip ──────────────────────────────────────── */}
+      <div className="relative w-full bg-white border-t border-brand-light/50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-3 divide-x divide-brand-light/50">
+            {ACTIVITY_STRIP.map((item) => (
+              <div key={item.label} className="flex items-center gap-4 py-5 px-4 first:pl-0 last:pr-0">
+                <div className="relative w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-cover"
+                    sizes="56px"
+                  />
+                </div>
+                <div>
+                  <p className="font-body font-bold text-ink text-sm">{item.label}</p>
+                  <p className="font-body text-ink-soft text-xs mt-0.5">Incluido en todos los planes</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Scroll indicator */}
       <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-ink-soft animate-bounce"
+        className="absolute bottom-24 left-1/2 -translate-x-1/2 text-ink-soft animate-bounce hidden lg:block"
         aria-hidden="true"
       >
         <ChevronDown size={24} />

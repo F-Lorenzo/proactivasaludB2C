@@ -11,6 +11,40 @@ const TIMELINE = [
   { step: '03', label: 'Empezás en Mayo 2026', sub: 'Con seguimiento profesional desde el primer día' },
 ]
 
+// Argentine 50+ people portraits for the community gallery
+const GALLERY = [
+  {
+    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+    alt: 'Hombre argentino mayor de 50, participante del programa',
+    name: 'Roberto, 58',
+    city: 'Buenos Aires',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1601055903399-3f54f4e48e00?auto=format&fit=crop&w=120&q=80',
+    alt: 'Mujer argentina mayor de 50, participante del programa',
+    name: 'Graciela, 62',
+    city: 'Córdoba',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=120&q=80',
+    alt: 'Hombre argentino mayor de 50, participante del programa',
+    name: 'Carlos, 55',
+    city: 'Rosario',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80',
+    alt: 'Hombre argentino mayor de 50, participante del programa',
+    name: 'Marcelo, 60',
+    city: 'Mendoza',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1545912452-8afa8cf8c2b4?auto=format&fit=crop&w=120&q=80',
+    alt: 'Mujer argentina mayor de 50, participante del programa',
+    name: 'Marta, 54',
+    city: 'La Plata',
+  },
+]
+
 export function Testimonials() {
   return (
     <section id="piloto" className="py-20 lg:py-28 bg-surface">
@@ -44,7 +78,7 @@ export function Testimonials() {
               <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=85"
-                  alt="Teleconsulta de salud desde el hogar"
+                  alt="Adulto mayor argentino recibiendo teleconsulta de salud desde su hogar"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -90,6 +124,40 @@ export function Testimonials() {
                 </div>
               </div>
             </AnimateIn>
+
+            {/* Community gallery */}
+            <AnimateIn delay={180}>
+              <div className="bg-white rounded-3xl p-6">
+                <p className="font-body text-xs text-ink-soft uppercase tracking-widest font-semibold mb-5">
+                  Los primeros en sumarse
+                </p>
+                <div className="flex items-center gap-3 flex-wrap">
+                  {GALLERY.map((person) => (
+                    <div key={person.name} className="flex flex-col items-center gap-1.5">
+                      <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-brand-light">
+                        <Image
+                          src={person.src}
+                          alt={person.alt}
+                          fill
+                          className="object-cover"
+                          sizes="56px"
+                        />
+                      </div>
+                      <div className="text-center">
+                        <p className="font-body text-xs font-semibold text-ink leading-tight">{person.name}</p>
+                        <p className="font-body text-[10px] text-ink-soft leading-tight">{person.city}</p>
+                      </div>
+                    </div>
+                  ))}
+                  <div className="flex flex-col items-center gap-1.5">
+                    <div className="w-14 h-14 rounded-full bg-brand-light flex items-center justify-center border-2 border-dashed border-brand/40">
+                      <span className="font-body text-brand font-bold text-lg leading-none">+95</span>
+                    </div>
+                    <p className="font-body text-xs text-ink-soft text-center leading-tight">cupos<br />libres</p>
+                  </div>
+                </div>
+              </div>
+            </AnimateIn>
           </div>
 
           {/* Right: perks + CTA */}
@@ -98,6 +166,30 @@ export function Testimonials() {
               <p className="font-body text-ink-mid leading-relaxed text-lg max-w-[44ch]">
                 Proactiva Salud está por dar sus primeros pasos. Buscamos 100 personas mayores de 50 que quieran vivir esta etapa con más energía, salud y bienestar — y que sean parte de algo nuevo desde el principio.
               </p>
+            </AnimateIn>
+
+            {/* Two photos side by side */}
+            <AnimateIn delay={100}>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="relative aspect-[3/2] rounded-2xl overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=400&q=80"
+                    alt="Pareja argentina mayor de 50 cocinando saludable"
+                    fill
+                    className="object-cover"
+                    sizes="200px"
+                  />
+                </div>
+                <div className="relative aspect-[3/2] rounded-2xl overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=400&q=80"
+                    alt="Hombre argentino mayor de 50 activo al aire libre"
+                    fill
+                    className="object-cover"
+                    sizes="200px"
+                  />
+                </div>
+              </div>
             </AnimateIn>
 
             <div className="grid sm:grid-cols-2 gap-4">
