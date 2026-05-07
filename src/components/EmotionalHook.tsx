@@ -14,7 +14,7 @@ const HOOKS = [
     alt: 'Pareja argentina mayor de 60 años abrazándose felices al aire libre',
     title: 'Disfrutar lo que importa',
     description:
-      'Los nietos, los viajes, el tiempo con quien amás. Querés estar presente y con energía para todo eso.',
+      '¡Esta es tu etapa! Con más tiempo, más libertad y más ganas que nunca. Viajá, reíte, disfrutá cada momento con la energía y la vitalidad que merecés.',
   },
   {
     image: '/hombre-50-con-celu.png',
