@@ -142,7 +142,7 @@ export default function QuienesSomos() {
         </section>
 
         {/* ── Values ──────────────────────────────────────────────────── */}
-        <section className="py-16 lg:py-24 bg-surface">
+        <section className="py-16 lg:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
             <div className="max-w-2xl mb-12">
@@ -158,14 +158,14 @@ export default function QuienesSomos() {
               {VALUES.map(({ icon: Icon, title, description }) => (
                 <div
                   key={title}
-                  className="bg-gradient-to-br from-white to-brand-light/40 rounded-3xl p-7 flex flex-col gap-4 border border-brand-light hover:shadow-hover transition-shadow duration-300"
+                  className="bg-gradient-to-br from-brand-dark to-brand rounded-3xl p-7 flex flex-col gap-4 hover:shadow-elevated transition-shadow duration-300"
                 >
-                  <div className="w-11 h-11 rounded-2xl bg-brand-light flex items-center justify-center text-brand flex-shrink-0">
+                  <div className="w-11 h-11 rounded-2xl bg-white/20 flex items-center justify-center text-white flex-shrink-0">
                     <Icon size={20} aria-hidden="true" />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <h3 className="font-body font-bold text-ink text-base">{title}</h3>
-                    <p className="font-body text-ink-mid text-base leading-relaxed">{description}</p>
+                    <h3 className="font-body font-bold text-white text-base">{title}</h3>
+                    <p className="font-body text-white/80 text-base leading-relaxed">{description}</p>
                   </div>
                 </div>
               ))}
