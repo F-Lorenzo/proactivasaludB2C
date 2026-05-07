@@ -158,7 +158,7 @@ export default function QuienesSomos() {
               {VALUES.map(({ icon: Icon, title, description }) => (
                 <div
                   key={title}
-                  className="bg-white rounded-3xl p-7 flex flex-col gap-4 hover:shadow-hover transition-shadow duration-300"
+                  className="bg-gradient-to-br from-white to-brand-light/40 rounded-3xl p-7 flex flex-col gap-4 border border-brand-light hover:shadow-hover transition-shadow duration-300"
                 >
                   <div className="w-11 h-11 rounded-2xl bg-brand-light flex items-center justify-center text-brand flex-shrink-0">
                     <Icon size={20} aria-hidden="true" />
