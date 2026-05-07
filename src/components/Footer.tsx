@@ -31,18 +31,19 @@ export function Footer() {
             </p>
             <ul className="flex flex-col gap-2.5">
               {[
-                { label: 'Los 5 pilares', href: '#pilares' },
-                { label: 'Planes', href: '#planes' },
-                { label: 'El piloto', href: '#piloto' },
-                { label: 'Inscribirse', href: '#inscripcion' },
+                { label: 'Quiénes somos', href: '/quienes-somos' },
+                { label: 'Los 5 pilares', href: '/#pilares' },
+                { label: 'Planes', href: '/#planes' },
+                { label: 'El piloto', href: '/#piloto' },
+                { label: 'Inscribirse', href: '/#inscripcion' },
               ].map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="font-body text-white/50 text-sm hover:text-white transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

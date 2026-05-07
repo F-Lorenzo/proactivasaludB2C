@@ -1,0 +1,206 @@
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { Heart, Users, ShieldCheck, Sparkles } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Quiénes somos — Proactiva Salud',
+  description:
+    'Conocé al equipo de Proactiva Salud: profesionales comprometidos con la prevención y el bienestar integral para mayores de 50.',
+}
+
+const VALUES = [
+  {
+    icon: Heart,
+    title: 'Acompañamiento cercano',
+    description:
+      'Brindamos un seguimiento continuo, claro y confiable, adaptado a cada persona y su etapa de vida.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Prevención primero',
+    description:
+      'Nuestro enfoque se anticipa a los problemas de salud promoviendo hábitos saludables antes de que aparezcan.',
+  },
+  {
+    icon: Users,
+    title: 'Equipo profesional',
+    description:
+      'Somos un equipo multidisciplinario comprometido con el bienestar físico, emocional y social de cada persona.',
+  },
+  {
+    icon: Sparkles,
+    title: 'Bienestar integral',
+    description:
+      'Trabajamos sobre nutrición, movimiento, salud emocional y autonomía para una calidad de vida plena.',
+  },
+]
+
+export default function QuienesSomos() {
+  return (
+    <>
+      <Header />
+      <main id="main">
+
+        {/* ── Hero ────────────────────────────────────────────────────── */}
+        <section className="relative pt-40 pb-24 lg:pt-48 lg:pb-32 bg-surface overflow-hidden">
+          {/* Background tint */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-y-0 right-0 w-[40%] bg-brand-light/50 hidden lg:block"
+          />
+
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-[55%_45%] gap-16 items-center">
+
+              {/* Text */}
+              <div className="flex flex-col gap-8">
+                <div className="flex items-center gap-3">
+                  <div className="h-px w-10 bg-brand" aria-hidden="true" />
+                  <span className="font-body font-semibold text-sm tracking-widest uppercase text-brand">
+                    Quiénes somos
+                  </span>
+                </div>
+
+                <h1 className="font-display text-4xl lg:text-5xl xl:text-6xl text-ink leading-[1.06] tracking-tight">
+                  En{' '}
+                  <span className="text-brand">PROACTIVA SALUD,</span>
+                  <br />
+                  creemos en el poder de los
+                  <br />
+                  pequeños cambios de
+                  <br />
+                  comportamiento que pueden
+                  <br />
+                  perdurar toda la vida.
+                </h1>
+
+                <p className="font-body text-lg text-ink-mid leading-relaxed max-w-[52ch]">
+                  Por eso, nos dedicamos a acompañar a las personas en cada etapa de la vida,
+                  con especial atención en el cuidado y la calidad de vida en la adultez.
+                </p>
+
+                <Link
+                  href="/#inscripcion"
+                  className="self-start inline-flex items-center gap-2 bg-brand text-white font-body font-semibold text-base px-8 py-4 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-elevated"
+                >
+                  Reservar mi cupo
+                </Link>
+              </div>
+
+              {/* Image */}
+              <div className="relative hidden lg:block">
+                <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden">
+                  <Image
+                    src="/imagen-portada-proactiva.png"
+                    alt="Equipo Proactiva Salud acompañando a adultos mayores"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 1024px) 0px, 45vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/30 to-transparent" />
+                </div>
+                {/* Floating badge */}
+                <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl px-6 py-4 shadow-elevated">
+                  <p className="font-display text-4xl font-bold text-brand leading-none">+50</p>
+                  <p className="font-body text-sm text-ink-mid mt-1">años, mejor calidad de vida</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── Body copy ───────────────────────────────────────────────── */}
+        <section className="py-20 lg:py-28 bg-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-[1fr_1fr] gap-16 items-start">
+
+              <div className="flex flex-col gap-6">
+                <p className="font-body text-ink-mid text-lg leading-relaxed">
+                  Sabemos que sentirse bien, mantenerse activo y conservar la autonomía es fundamental,
+                  y por eso trabajamos para brindar herramientas que ayuden a lograrlo.
+                </p>
+                <p className="font-body text-ink-mid text-lg leading-relaxed">
+                  Somos un equipo de profesionales comprometidos con la prevención y el bienestar integral,
+                  ofreciendo orientación, seguimiento continuo y propuestas adaptadas a cada persona.
+                  Nuestro enfoque busca anticiparse a los problemas de salud, promoviendo hábitos saludables,
+                  bienestar físico y el equilibrio emocional.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-6">
+                <p className="font-body text-ink-mid text-lg leading-relaxed">
+                  Creemos que nunca es tarde para empezar a cuidarse mejor. Por eso, en Proactiva Salud
+                  brindamos un acompañamiento cercano, claro y confiable, ayudando a cada persona a vivir
+                  con más energía, tranquilidad y bienestar.
+                </p>
+                <div className="h-px bg-brand-light" aria-hidden="true" />
+                <p className="font-body text-brand font-semibold text-lg leading-relaxed italic">
+                  "Nunca es tarde para empezar a cuidarse mejor."
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* ── Values ──────────────────────────────────────────────────── */}
+        <section className="py-20 lg:py-28 bg-surface">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <div className="max-w-2xl mb-14">
+              <p className="font-body text-brand text-xs tracking-widest uppercase font-semibold mb-4">
+                Nuestros valores
+              </p>
+              <h2 className="font-display text-4xl lg:text-5xl text-ink leading-tight">
+                Lo que nos guía cada día
+              </h2>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {VALUES.map(({ icon: Icon, title, description }) => (
+                <div
+                  key={title}
+                  className="bg-white rounded-3xl p-8 flex flex-col gap-5 hover:shadow-hover transition-shadow duration-300"
+                >
+                  <div className="w-12 h-12 rounded-2xl bg-brand-light flex items-center justify-center text-brand flex-shrink-0">
+                    <Icon size={22} aria-hidden="true" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="font-body font-bold text-ink text-base">{title}</h3>
+                    <p className="font-body text-ink-mid text-sm leading-relaxed">{description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+
+        {/* ── CTA ─────────────────────────────────────────────────────── */}
+        <section className="py-20 lg:py-28 bg-brand-dark">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center gap-8">
+            <h2 className="font-display text-4xl lg:text-5xl text-white leading-tight max-w-[20ch]">
+              Empezá hoy a vivir con más energía y bienestar
+            </h2>
+            <p className="font-body text-white/65 text-lg max-w-[44ch] leading-relaxed">
+              Sumate al piloto de Proactiva Salud. Solo 100 cupos disponibles para Mayo 2026.
+            </p>
+            <Link
+              href="/#inscripcion"
+              className="inline-flex items-center justify-center bg-white text-brand font-body font-semibold text-base px-10 py-4 rounded-full hover:bg-brand-light transition-colors shadow-elevated"
+            >
+              Reservar mi cupo
+            </Link>
+          </div>
+        </section>
+
+      </main>
+      <Footer />
+    </>
+  )
+}
