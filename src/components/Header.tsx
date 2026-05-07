@@ -36,12 +36,6 @@ export function Header() {
 
         {/* Nav */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Navegación principal">
-          <Link
-            href="/quienes-somos"
-            className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
-          >
-            Quiénes somos
-          </Link>
           <a
             href="#pilares"
             className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
@@ -60,6 +54,12 @@ export function Header() {
           >
             El piloto
           </a>
+          <Link
+            href="/quienes-somos"
+            className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
+          >
+            Quiénes somos
+          </Link>
         </nav>
 
         {/* CTA */}
