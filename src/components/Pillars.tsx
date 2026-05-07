@@ -20,8 +20,8 @@ const PILLAR_IMAGES: Record<string, { src: string; alt: string }> = {
     alt: 'Señora mayor hablando con su psicólogo por videollamada desde casa',
   },
   '04': {
-    src: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=85',
-    alt: 'Adulto mayor recibiendo atención médica por teleconsulta desde su hogar',
+    src: '/senora-50.png',
+    alt: 'Señora mayor de 50 en teleconsulta médica desde su hogar',
   },
   '05': {
     src: 'https://images.unsplash.com/photo-1752700064245-caa940f9b6dc?auto=format&fit=crop&w=600&q=85',
