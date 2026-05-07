@@ -248,8 +248,8 @@ export function HealthStats() {
               {/* Third full-width photo */}
               <div className="relative w-full aspect-[16/7] rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=85"
-                  alt="Grupo de adultos mayores de 50 compartiendo actividades de bienestar"
+                  src="/gente-vieja-en-grupo.png"
+                  alt="Grupo de adultos mayores compartiendo un momento juntos"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 45vw"
