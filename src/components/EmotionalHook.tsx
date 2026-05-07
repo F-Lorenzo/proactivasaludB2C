@@ -17,8 +17,8 @@ const HOOKS = [
       '¡Esta es tu etapa! Con más tiempo, más libertad y más ganas que nunca. Viajá, reíte, disfrutá cada momento con la energía y la vitalidad que merecés.',
   },
   {
-    image: '/hombre-50-con-celu.png',
-    alt: 'Hombre mayor de 50 usando su celular',
+    image: '/vieja-saludable.png',
+    alt: 'Mujer mayor saludable y activa',
     title: 'Prevenir, no esperar',
     description:
       'Los hábitos saludables aumentan la energía, la vitalidad y la calidad de vida. Invertir en salud hoy es ganar independencia para el futuro.',
