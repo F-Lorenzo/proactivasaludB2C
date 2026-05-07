@@ -232,8 +232,8 @@ export function HealthStats() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=500&q=85"
-                    alt="Teleconsulta médica desde el hogar"
+                    src="/hombre-50-con-celu.png"
+                    alt="Hombre mayor de 50 usando su celular"
                     fill
                     className="object-cover"
                     sizes="220px"
