@@ -6,10 +6,10 @@ import { AnimateIn } from './ui/AnimateIn'
 import { TrendingUp } from 'lucide-react'
 
 const METRICS = [
-  { pct: 87, label: 'mejoró su nivel de energía diaria', timeframe: 'en 12 semanas', color: '#2D7A4F' },
-  { pct: 91, label: 'mejoró su calidad de sueño', timeframe: 'en 8 semanas', color: '#2D7A4F' },
-  { pct: 74, label: 'redujo el dolor articular', timeframe: 'en 16 semanas', color: '#2D7A4F' },
-  { pct: 82, label: 'redujo marcadores de estrés', timeframe: 'en 12 semanas', color: '#2D7A4F' },
+  { pct: 73, label: 'mejoró su nivel de energía diaria', timeframe: 'en 12 semanas', color: '#2D7A4F' },
+  { pct: 62, label: 'mejoró su calidad de sueño', timeframe: 'en 8 semanas', color: '#2D7A4F' },
+  { pct: 54, label: 'redujo el dolor articular', timeframe: 'en 16 semanas', color: '#2D7A4F' },
+  { pct: 58, label: 'redujo marcadores de estrés', timeframe: 'en 12 semanas', color: '#2D7A4F' },
 ]
 
 // SVG path for a smooth upward trend line (weeks 0–12, normalized to 200×80 viewBox)
