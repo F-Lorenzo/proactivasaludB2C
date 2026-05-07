@@ -3,8 +3,8 @@ import { AnimateIn } from './ui/AnimateIn'
 
 const HOOKS = [
   {
-    image: 'https://images.unsplash.com/photo-1758874960180-996bc2523a37?auto=format&fit=crop&w=600&q=85',
-    alt: 'Abuela argentina compartiendo un momento feliz con su nieta',
+    image: '/pareja-playa.png',
+    alt: 'Pareja mayor disfrutando juntos en la playa',
     title: 'Seguir siendo vos mismo',
     description:
       'Independencia, energía y ganas de hacer planes. No querés que te cuiden — querés cuidarte bien.',
@@ -17,8 +17,8 @@ const HOOKS = [
       'Los nietos, los viajes, el tiempo con quien amás. Querés estar presente y con energía para todo eso.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1758612898691-afe3e1d08a0a?auto=format&fit=crop&w=600&q=85',
-    alt: 'Adulto mayor argentino realizando videollamada con su médico desde casa',
+    image: '/hombre-50-con-celu.png',
+    alt: 'Hombre mayor de 50 usando su celular',
     title: 'Prevenir, no esperar',
     description:
       'Los hábitos saludables aumentan la energía, la vitalidad y la calidad de vida. Invertir en salud hoy es ganar independencia para el futuro.',
