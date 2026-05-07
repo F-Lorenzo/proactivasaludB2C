@@ -7,7 +7,7 @@ const config: Config = {
       colors: {
         brand: {
           DEFAULT: 'oklch(0.47 0.22 295)',
-          dark:    'oklch(0.27 0.18 295)',
+          dark:    'oklch(0.24 0.18 295)',
           light:   'oklch(0.95 0.04 295)',
           mid:     'oklch(0.58 0.20 302)',
           muted:   'oklch(0.90 0.06 295)',
