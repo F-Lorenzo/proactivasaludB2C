@@ -10,8 +10,8 @@ const HOOKS = [
       'Independencia, energía y ganas de hacer planes. No querés que te cuiden — querés cuidarte bien.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1761671613649-8dd7a3d961ba?auto=format&fit=crop&w=600&q=85',
-    alt: 'Pareja argentina mayor de 60 años abrazándose felices al aire libre',
+    image: '/pareja-haciendo-ejercicio.png',
+    alt: 'Pareja mayor haciendo ejercicio juntos al aire libre',
     title: 'Disfrutar lo que importa',
     description:
       '¡Esta es tu etapa! Con más tiempo, más libertad y más ganas que nunca. Viajá, reíte, disfrutá cada momento con la energía y la vitalidad que merecés.',
