@@ -24,8 +24,8 @@ const PILLAR_IMAGES: Record<string, { src: string; alt: string }> = {
     alt: 'Señora mayor de 50 en teleconsulta médica desde su hogar',
   },
   '05': {
-    src: 'https://images.unsplash.com/photo-1752700064245-caa940f9b6dc?auto=format&fit=crop&w=600&q=85',
-    alt: 'Grupo de adultos mayores de 50 compartiendo un momento juntos al aire libre',
+    src: '/reunion-coaching-virtual.png',
+    alt: 'Reunión de coaching virtual grupal',
   },
 }
 
