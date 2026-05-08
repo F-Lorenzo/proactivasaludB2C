@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -11,13 +12,14 @@ export function Footer() {
         <div className="grid md:grid-cols-[1fr_auto_auto] gap-10 mb-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
-                <span className="font-display font-bold text-white text-sm" aria-hidden="true">P</span>
-              </div>
-              <span className="font-display font-bold text-lg text-white leading-none">
-                Proactiva Salud
-              </span>
+            <div className="mb-4">
+              <Image
+                src="/Logo_proactiva_salud_nuevo.png"
+                alt="Proactiva Salud"
+                width={160}
+                height={48}
+                className="h-16 w-auto object-contain brightness-0 invert"
+              />
             </div>
             <p className="font-body text-white/45 text-sm max-w-xs leading-relaxed">
               Programa integral de bienestar para mayores de 50. Piloto de lanzamiento — Junio 2026.
