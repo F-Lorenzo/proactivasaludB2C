@@ -20,8 +20,8 @@ const GALLERY = [
     city: 'Buenos Aires',
   },
   {
-    src: 'https://images.unsplash.com/photo-1601055903399-3f54f4e48e00?auto=format&fit=crop&w=120&q=80',
-    alt: 'Mujer argentina mayor de 50, participante del programa',
+    src: 'https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?auto=format&fit=crop&w=120&q=80',
+    alt: 'Mujer italo-argentina mayor de 60, participante del programa',
     name: 'Graciela, 62',
     city: 'Córdoba',
   },
@@ -38,8 +38,8 @@ const GALLERY = [
     city: 'Mendoza',
   },
   {
-    src: 'https://images.unsplash.com/photo-1545912452-8afa8cf8c2b4?auto=format&fit=crop&w=120&q=80',
-    alt: 'Mujer argentina mayor de 50, participante del programa',
+    src: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=120&q=80',
+    alt: 'Mujer italo-argentina mayor de 50, participante del programa',
     name: 'Marta, 54',
     city: 'La Plata',
   },
