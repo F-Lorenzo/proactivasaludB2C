@@ -23,9 +23,9 @@ export function Plans() {
         </AnimateIn>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {PLANS.map((plan, i) => (
-            <AnimateIn key={plan.id} delay={i * 100}>
+            <AnimateIn key={plan.id} delay={i * 100} className="h-full">
               <div
                 className={`relative rounded-3xl p-8 flex flex-col h-full transition-all duration-200 ${
                   plan.highlighted
