@@ -77,8 +77,8 @@ export function Testimonials() {
               {/* Pilot image */}
               <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=85"
-                  alt="Adulto mayor argentino recibiendo teleconsulta de salud desde su hogar"
+                  src="/doctor.jpg"
+                  alt="Doctor del programa Proactiva Salud"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
