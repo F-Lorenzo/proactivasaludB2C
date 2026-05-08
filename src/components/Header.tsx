@@ -36,24 +36,30 @@ export function Header() {
 
         {/* Nav */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Navegación principal">
-          <a
-            href="#pilares"
+          <Link
+            href="/"
+            className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
+          >
+            Inicio
+          </Link>
+          <Link
+            href="/#pilares"
             className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
           >
             El programa
-          </a>
-          <a
-            href="#planes"
+          </Link>
+          <Link
+            href="/#planes"
             className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
           >
             Planes
-          </a>
-          <a
-            href="#piloto"
+          </Link>
+          <Link
+            href="/#piloto"
             className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
           >
             El piloto
-          </a>
+          </Link>
           <Link
             href="/quienes-somos"
             className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
@@ -63,12 +69,12 @@ export function Header() {
         </nav>
 
         {/* CTA */}
-        <a
-          href="#inscripcion"
+        <Link
+          href="/#inscripcion"
           className="bg-brand text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-hover"
         >
           Reservar mi cupo
-        </a>
+        </Link>
       </div>
     </header>
   )
