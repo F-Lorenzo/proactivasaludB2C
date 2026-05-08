@@ -8,8 +8,8 @@ const ACTIVITY_STRIP = [
     label: 'Nutrición',
   },
   {
-    src: 'https://images.unsplash.com/photo-1571019614242-c5c5dee81285?auto=format&fit=crop&w=400&q=80',
-    alt: 'Adulto argentino mayor de 50 haciendo ejercicio físico',
+    src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80',
+    alt: 'Adulto mayor de 50 caminando activamente al aire libre',
     label: 'Movimiento',
   },
   {
