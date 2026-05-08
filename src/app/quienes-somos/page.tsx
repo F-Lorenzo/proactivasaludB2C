@@ -86,7 +86,7 @@ export default function QuienesSomos() {
 
               {/* Image */}
               <div className="relative hidden lg:block">
-                <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden">
+                <div className="relative w-[85%] mx-auto aspect-[4/5] rounded-[2rem] overflow-hidden">
                   <Image
                     src="/imagen-portada-quienes-somos.png"
                     alt="Equipo Proactiva Salud acompañando a adultos mayores"
