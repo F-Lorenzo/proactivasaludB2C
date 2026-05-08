@@ -173,8 +173,8 @@ export function Testimonials() {
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative aspect-[3/2] rounded-2xl overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1761055923163-517bc7a55c84?auto=format&fit=crop&w=400&q=80"
-                    alt="Dos mujeres argentinas mayores de 50 caminando juntas en el parque"
+                    src="/bienestar.png"
+                    alt="Adultas mayores caminando juntas al aire libre"
                     fill
                     className="object-cover"
                     sizes="200px"
