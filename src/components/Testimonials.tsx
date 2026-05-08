@@ -182,8 +182,8 @@ export function Testimonials() {
                 </div>
                 <div className="relative aspect-[3/2] rounded-2xl overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1702648159730-00699257be79?auto=format&fit=crop&w=400&q=80"
-                    alt="Mujer argentina mayor de 50 años trotando activamente en el parque"
+                    src="/viejos-felices.png"
+                    alt="Adultos mayores felices disfrutando juntos"
                     fill
                     className="object-cover"
                     sizes="200px"
