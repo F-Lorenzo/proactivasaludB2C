@@ -40,7 +40,7 @@ export function CTASection() {
               Reservá tu cupo en el piloto
             </h2>
             <p className="font-body text-xl text-white/65 leading-relaxed max-w-[42ch]">
-              Dejanos tus datos y un asesor te va a contactar para contarte todo sobre el programa piloto de Mayo 2026.
+              Dejanos tus datos y un asesor te va a contactar para contarte todo sobre el programa piloto de Junio 2026.
             </p>
 
             <ul className="flex flex-col gap-4 mt-2">
@@ -72,7 +72,7 @@ export function CTASection() {
                   ¡Gracias, {nombre}!
                 </h3>
                 <p className="font-body text-ink-mid max-w-xs leading-relaxed">
-                  Un asesor de Proactiva Salud se comunicará con vos pronto para confirmar tu lugar en el piloto de Mayo 2026.
+                  Un asesor de Proactiva Salud se comunicará con vos pronto para confirmar tu lugar en el piloto de Junio 2026.
                 </p>
               </div>
             ) : (

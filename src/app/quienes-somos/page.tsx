@@ -181,7 +181,7 @@ export default function QuienesSomos() {
               Empezá hoy a vivir con más energía y bienestar
             </h2>
             <p className="font-body text-base text-white/65 max-w-[44ch] leading-relaxed">
-              Sumate al piloto de Proactiva Salud. Solo 100 cupos disponibles para Mayo 2026.
+              Sumate al piloto de Proactiva Salud. Solo 100 cupos disponibles para Junio 2026.
             </p>
             <Link
               href="/#inscripcion"

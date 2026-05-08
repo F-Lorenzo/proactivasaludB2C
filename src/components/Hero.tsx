@@ -76,7 +76,7 @@ export function Hero() {
             <div className="flex items-center gap-3 pt-2">
               <div className="flex items-center gap-2 bg-accent-light text-accent font-body font-semibold text-sm px-4 py-2.5 rounded-full">
                 <CalendarDays size={16} aria-hidden="true" />
-                Lanzamiento Mayo 2026
+                Lanzamiento Junio 2026
               </div>
               <span className="font-body text-xs text-ink-soft">
                 100 cupos disponibles
@@ -111,7 +111,7 @@ export function Hero() {
               <div className="absolute -bottom-4 -left-4 bg-white rounded-xl px-4 py-3 shadow-hover flex items-center gap-2.5">
                 <CalendarDays size={20} className="text-brand flex-shrink-0" aria-hidden="true" />
                 <span className="font-body text-sm font-semibold text-ink leading-tight">
-                  Inicio<br />Mayo 2026
+                  Inicio<br />Junio 2026
                 </span>
               </div>
 

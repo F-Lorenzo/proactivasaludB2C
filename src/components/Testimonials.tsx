@@ -8,7 +8,7 @@ const iconMap = { Star, MessageCircle, Shield, BadgePercent }
 const TIMELINE = [
   { step: '01', label: 'Completás el formulario', sub: 'Te reservamos tu cupo sin compromiso' },
   { step: '02', label: 'Un asesor te contacta', sub: 'Te explicamos el programa y respondemos tus dudas' },
-  { step: '03', label: 'Empezás en Mayo 2026', sub: 'Con seguimiento profesional desde el primer día' },
+  { step: '03', label: 'Empezás en Junio 2026', sub: 'Con seguimiento profesional desde el primer día' },
 ]
 
 // Argentine 50+ people portraits for the community gallery
@@ -55,7 +55,7 @@ export function Testimonials() {
           <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-end mb-16">
             <div>
               <p className="font-body text-brand text-xs tracking-widest uppercase font-semibold mb-4">
-                Programa piloto · Mayo 2026
+                Programa piloto · Junio 2026
               </p>
               <h2 className="font-display text-4xl lg:text-5xl text-ink leading-tight">
                 Sé parte del grupo<br />que lo empieza todo
@@ -217,7 +217,7 @@ export function Testimonials() {
               <div className="bg-brand-dark rounded-3xl p-8 flex flex-col gap-5">
                 <div className="flex items-center gap-3">
                   <CalendarDays size={20} className="text-brand-light" aria-hidden="true" />
-                  <p className="font-body font-semibold text-white">Inicio: Mayo 2026</p>
+                  <p className="font-body font-semibold text-white">Inicio: Junio 2026</p>
                 </div>
                 <p className="font-body text-white/65 text-sm leading-relaxed">
                   Las inscripciones al piloto son por orden de llegada. Una vez cubiertos los 100 cupos, la lista se cierra.

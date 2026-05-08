@@ -20,7 +20,7 @@ export function Footer() {
               </span>
             </div>
             <p className="font-body text-white/45 text-sm max-w-xs leading-relaxed">
-              Programa integral de bienestar para mayores de 50. Piloto de lanzamiento — Mayo 2026.
+              Programa integral de bienestar para mayores de 50. Piloto de lanzamiento — Junio 2026.
             </p>
           </div>
 
