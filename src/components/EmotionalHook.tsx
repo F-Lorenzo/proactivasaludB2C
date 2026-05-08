@@ -3,22 +3,22 @@ import { AnimateIn } from './ui/AnimateIn'
 
 const HOOKS = [
   {
-    image: 'https://images.unsplash.com/photo-1758874960180-996bc2523a37?auto=format&fit=crop&w=600&q=85',
-    alt: 'Abuela argentina compartiendo un momento feliz con su nieta',
+    image: '/pareja-playa.png',
+    alt: 'Pareja mayor disfrutando juntos en la playa',
     title: 'Seguir siendo vos mismo',
     description:
       'Independencia, energía y ganas de hacer planes. No querés que te cuiden — querés cuidarte bien.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1761671613649-8dd7a3d961ba?auto=format&fit=crop&w=600&q=85',
-    alt: 'Pareja argentina mayor de 60 años abrazándose felices al aire libre',
+    image: '/pareja-haciendo-ejercicio.png',
+    alt: 'Pareja mayor haciendo ejercicio juntos al aire libre',
     title: 'Disfrutar lo que importa',
     description:
-      'Los nietos, los viajes, el tiempo con quien amás. Querés estar presente y con energía para todo eso.',
+      '¡Esta es tu etapa! Con más tiempo, más libertad y más ganas que nunca. Viajá, reíte, disfrutá cada momento con la energía y la vitalidad que merecés.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1758612898691-afe3e1d08a0a?auto=format&fit=crop&w=600&q=85',
-    alt: 'Adulto mayor argentino realizando videollamada con su médico desde casa',
+    image: '/vieja-saludable.png',
+    alt: 'Mujer mayor saludable y activa',
     title: 'Prevenir, no esperar',
     description:
       'Los hábitos saludables aumentan la energía, la vitalidad y la calidad de vida. Invertir en salud hoy es ganar independencia para el futuro.',

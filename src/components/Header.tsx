@@ -54,6 +54,12 @@ export function Header() {
           >
             El piloto
           </a>
+          <Link
+            href="/quienes-somos"
+            className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
+          >
+            Quiénes somos
+          </Link>
         </nav>
 
         {/* CTA */}

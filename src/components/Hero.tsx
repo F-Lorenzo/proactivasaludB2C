@@ -91,8 +91,8 @@ export function Hero() {
               {/* Hero photo */}
               <div className="w-full aspect-[4/5] rounded-[2rem] overflow-hidden relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1625725764771-663bbc578f2e?auto=format&fit=crop&w=600&q=85"
-                  alt="Pareja argentina mayor de 60 años haciendo ejercicio juntos al aire libre"
+                  src="/imagen-portada-proactiva.png"
+                  alt="Imagen de portada Proactiva Salud"
                   fill
                   className="object-cover"
                   priority

@@ -6,10 +6,10 @@ import { AnimateIn } from './ui/AnimateIn'
 import { TrendingUp } from 'lucide-react'
 
 const METRICS = [
-  { pct: 87, label: 'mejoró su nivel de energía diaria', timeframe: 'en 12 semanas', color: '#2D7A4F' },
-  { pct: 91, label: 'mejoró su calidad de sueño', timeframe: 'en 8 semanas', color: '#2D7A4F' },
-  { pct: 74, label: 'redujo el dolor articular', timeframe: 'en 16 semanas', color: '#2D7A4F' },
-  { pct: 82, label: 'redujo marcadores de estrés', timeframe: 'en 12 semanas', color: '#2D7A4F' },
+  { pct: 73, label: 'mejoró su nivel de energía diaria', timeframe: 'en 12 semanas', color: '#2D7A4F' },
+  { pct: 62, label: 'mejoró su calidad de sueño', timeframe: 'en 8 semanas', color: '#2D7A4F' },
+  { pct: 54, label: 'redujo el dolor articular', timeframe: 'en 16 semanas', color: '#2D7A4F' },
+  { pct: 58, label: 'redujo marcadores de estrés', timeframe: 'en 12 semanas', color: '#2D7A4F' },
 ]
 
 // SVG path for a smooth upward trend line (weeks 0–12, normalized to 200×80 viewBox)
@@ -232,8 +232,8 @@ export function HealthStats() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=500&q=85"
-                    alt="Teleconsulta médica desde el hogar"
+                    src="/hombre-50-con-celu.png"
+                    alt="Hombre mayor de 50 usando su celular"
                     fill
                     className="object-cover"
                     sizes="220px"
@@ -248,8 +248,8 @@ export function HealthStats() {
               {/* Third full-width photo */}
               <div className="relative w-full aspect-[16/7] rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=85"
-                  alt="Grupo de adultos mayores de 50 compartiendo actividades de bienestar"
+                  src="/gente-vieja-en-grupo.png"
+                  alt="Grupo de adultos mayores compartiendo un momento juntos"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 45vw"
