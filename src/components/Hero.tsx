@@ -129,11 +129,14 @@ export function Hero() {
       </div>
 
       {/* ── Highlight banner ─────────────────────────────────────────── */}
-      <div className="relative w-full bg-accent">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 text-center">
-          <p className="font-body font-semibold text-sm lg:text-base text-white">
-            Hablá con un profesional hoy, desde tu casa. Sin turnos, sin esperas, con seguimiento real.
-          </p>
+      <div className="relative w-full bg-surface px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-accent rounded-2xl px-6 py-5 lg:px-8">
+            <p className="font-body text-sm lg:text-base text-white text-center leading-relaxed">
+              <span className="font-bold">Hablá con un profesional hoy, desde tu casa.</span>{' '}
+              Sin turnos, sin esperas, con seguimiento real.
+            </p>
+          </div>
         </div>
       </div>
 
