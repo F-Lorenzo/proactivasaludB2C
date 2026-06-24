@@ -1,24 +1,6 @@
 import Image from 'next/image'
 import { ChevronDown, CalendarDays, Users } from 'lucide-react'
 
-const ACTIVITY_STRIP = [
-  {
-    src: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=400&q=80',
-    alt: 'Pareja argentina mayor de 50 cocinando juntos saludablemente',
-    label: 'Nutrición',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80',
-    alt: 'Adulto mayor de 50 caminando activamente al aire libre',
-    label: 'Movimiento',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80',
-    alt: 'Persona argentina mayor de 50 en un momento de bienestar emocional',
-    label: 'Bienestar',
-  },
-]
-
 export function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden bg-surface pt-16 lg:pt-24">
@@ -146,28 +128,12 @@ export function Hero() {
         </div>
       </div>
 
-      {/* ── Activity photo strip ──────────────────────────────────────── */}
-      <div className="relative w-full bg-white border-t border-brand-light/50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-3 divide-x divide-brand-light/50">
-            {ACTIVITY_STRIP.map((item) => (
-              <div key={item.label} className="flex items-center gap-4 py-5 px-4 first:pl-0 last:pr-0">
-                <div className="relative w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    className="object-cover"
-                    sizes="56px"
-                  />
-                </div>
-                <div>
-                  <p className="font-body font-bold text-ink text-sm">{item.label}</p>
-                  <p className="font-body text-ink-soft text-xs mt-0.5">Incluido en todos los planes</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* ── Highlight banner ─────────────────────────────────────────── */}
+      <div className="relative w-full bg-accent">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-4 text-center">
+          <p className="font-body font-semibold text-sm lg:text-base text-white">
+            Hablá con un profesional hoy, desde tu casa. Sin turnos, sin esperas, con seguimiento real.
+          </p>
         </div>
       </div>
 
