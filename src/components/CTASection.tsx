@@ -37,10 +37,10 @@ export function CTASection() {
               Empezá hoy
             </p>
             <h2 className="font-display text-4xl lg:text-5xl text-white leading-tight">
-              Reservá tu cupo en el piloto
+              Reservá tu cupo
             </h2>
             <p className="font-body text-xl text-white/65 leading-relaxed max-w-[42ch]">
-              Dejanos tus datos y un asesor te va a contactar para contarte todo sobre el programa piloto de Junio 2026.
+              Dejanos tus datos y un asesor te va a contactar para contarte todo sobre el programa de Junio 2026.
             </p>
 
             <ul className="flex flex-col gap-4 mt-2">
@@ -72,7 +72,7 @@ export function CTASection() {
                   ¡Gracias, {nombre}!
                 </h3>
                 <p className="font-body text-ink-mid max-w-xs leading-relaxed">
-                  Un asesor de Proactiva Salud se comunicará con vos pronto para confirmar tu lugar en el piloto de Junio 2026.
+                  Un asesor de Proactiva Salud se comunicará con vos pronto para confirmar tu lugar en el programa de Junio 2026.
                 </p>
               </div>
             ) : (
@@ -186,7 +186,7 @@ export function CTASection() {
                   className="mt-1 w-full flex items-center justify-center gap-2.5 bg-brand text-white font-body font-semibold text-base py-4 rounded-full hover:bg-brand-dark transition-colors shadow-button"
                 >
                   <Send size={18} aria-hidden="true" />
-                  Reservar mi cupo en el piloto
+                  Reservar mi cupo
                 </button>
 
                 <p className="font-body text-xs text-ink-soft text-center">

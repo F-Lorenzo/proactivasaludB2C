@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ChevronDown, CalendarDays } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 export function Hero() {
   return (
@@ -55,15 +55,6 @@ export function Hero() {
             </div>
 
             {/* Pilot launch badge */}
-            <div className="flex items-center gap-3 pt-2">
-              <div className="flex items-center gap-2 bg-accent-light text-accent font-body font-semibold text-sm px-4 py-2.5 rounded-full">
-                <CalendarDays size={16} aria-hidden="true" />
-                Lanzamiento Junio 2026
-              </div>
-              <span className="font-body text-xs text-ink-soft">
-                100 cupos disponibles
-              </span>
-            </div>
           </div>
 
           {/* ── Visual ───────────────────────────────────────────────────── */}

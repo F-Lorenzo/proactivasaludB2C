@@ -55,10 +55,10 @@ export function Header() {
             Planes
           </Link>
           <Link
-            href="/#piloto"
+            href="/#comunidad"
             className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
           >
-            El piloto
+            Comunidad
           </Link>
           <Link
             href="/quienes-somos"

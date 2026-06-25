@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Star, MessageCircle, Shield, BadgePercent, CalendarDays, ArrowRight } from 'lucide-react'
-import { PILOT_PERKS } from '@/lib/constants'
+import { LAUNCH_PERKS } from '@/lib/constants'
 import { AnimateIn } from './ui/AnimateIn'
 
 const iconMap = { Star, MessageCircle, Shield, BadgePercent }
@@ -47,24 +47,18 @@ const GALLERY = [
 
 export function Testimonials() {
   return (
-    <section id="piloto" className="py-20 lg:py-28 bg-surface">
+    <section id="comunidad" className="py-20 lg:py-28 bg-surface">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
         <AnimateIn>
-          <div className="grid lg:grid-cols-[1fr_auto] gap-8 items-end mb-16">
-            <div>
-              <p className="font-body text-brand text-xs tracking-widest uppercase font-semibold mb-4">
-                Programa piloto · Junio 2026
-              </p>
-              <h2 className="font-display text-4xl lg:text-5xl text-ink leading-tight">
-                Sé parte del grupo<br />que lo empieza todo
-              </h2>
-            </div>
-            <div className="flex flex-col items-start lg:items-end gap-1">
-              <p className="font-display text-6xl lg:text-7xl font-bold text-brand leading-none">100</p>
-              <p className="font-body text-ink-mid text-sm">cupos disponibles</p>
-            </div>
+          <div className="mb-16">
+            <p className="font-body text-brand text-xs tracking-widest uppercase font-semibold mb-4">
+              Lanzamiento · Junio 2026
+            </p>
+            <h2 className="font-display text-4xl lg:text-5xl text-ink leading-tight">
+              Sé parte del grupo<br />que lo empieza todo
+            </h2>
           </div>
         </AnimateIn>
 
@@ -74,7 +68,7 @@ export function Testimonials() {
           {/* Left: image + context */}
           <div className="flex flex-col gap-8">
             <AnimateIn>
-              {/* Pilot image */}
+              {/* Program image */}
               <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
                   src="/doctor.jpg"
@@ -88,10 +82,7 @@ export function Testimonials() {
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="bg-white/92 backdrop-blur-sm rounded-2xl p-4">
                     <p className="font-body text-sm font-semibold text-ink">
-                      El piloto incluye el programa completo con seguimiento semanal del equipo.
-                    </p>
-                    <p className="font-body text-xs text-ink-soft mt-1">
-                      Tu experiencia ayudará a dar forma al programa definitivo.
+                      El programa incluye seguimiento semanal del equipo profesional.
                     </p>
                   </div>
                 </div>
@@ -193,7 +184,7 @@ export function Testimonials() {
             </AnimateIn>
 
             <div className="grid sm:grid-cols-2 gap-4">
-              {PILOT_PERKS.map((perk, i) => {
+              {LAUNCH_PERKS.map((perk, i) => {
                 const Icon = iconMap[perk.icon as keyof typeof iconMap]
                 return (
                   <AnimateIn key={perk.title} delay={120 + i * 70}>
@@ -220,7 +211,7 @@ export function Testimonials() {
                   <p className="font-body font-semibold text-white">Inicio: Junio 2026</p>
                 </div>
                 <p className="font-body text-white/65 text-sm leading-relaxed">
-                  Las inscripciones al piloto son por orden de llegada. Una vez cubiertos los 100 cupos, la lista se cierra.
+                  Las inscripciones son por orden de llegada. Una vez cubiertos los 100 cupos, la lista se cierra.
                 </p>
                 <a
                   href="#inscripcion"

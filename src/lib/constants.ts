@@ -130,7 +130,7 @@ export const EMOTIONAL_HOOKS = [
   },
 ]
 
-export const PILOT_PERKS = [
+export const LAUNCH_PERKS = [
   {
     icon: 'Star',
     title: 'Acceso prioritario al programa',
@@ -139,16 +139,16 @@ export const PILOT_PERKS = [
   {
     icon: 'MessageCircle',
     title: 'Tu opinión da forma al programa',
-    description: 'Tu experiencia durante el piloto influye directamente en cómo evolucionará Proactiva Salud.',
+    description: 'Tu experiencia influye directamente en cómo evolucionará Proactiva Salud.',
   },
   {
     icon: 'Shield',
     title: 'Seguimiento intensivo del equipo',
-    description: 'Durante la prueba piloto, el equipo profesional te acompañará con atención personalizada y constante.',
+    description: 'El equipo profesional te acompañará con atención personalizada y constante.',
   },
   {
     icon: 'BadgePercent',
-    title: 'Precio especial de piloto',
-    description: 'Los participantes del piloto acceden a condiciones exclusivas que no estarán disponibles en el lanzamiento general.',
+    title: 'Precio especial de lanzamiento',
+    description: 'Los primeros en sumarse acceden a condiciones exclusivas que no estarán disponibles más adelante.',
   },
 ]

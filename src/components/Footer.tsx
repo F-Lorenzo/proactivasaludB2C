@@ -22,7 +22,7 @@ export function Footer() {
               />
             </div>
             <p className="font-body text-white/45 text-sm max-w-xs leading-relaxed">
-              Programa integral de bienestar para mayores de 50. Piloto de lanzamiento — Junio 2026.
+              Programa integral de bienestar para mayores de 50. Lanzamiento — Junio 2026.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export function Footer() {
                 { label: 'Quiénes somos', href: '/quienes-somos' },
                 { label: 'Los 5 pilares', href: '/#pilares' },
                 { label: 'Planes', href: '/#planes' },
-                { label: 'El piloto', href: '/#piloto' },
+                { label: 'Comunidad', href: '/#comunidad' },
                 { label: 'Inscribirse', href: '/#inscripcion' },
               ].map((link) => (
                 <li key={link.href}>

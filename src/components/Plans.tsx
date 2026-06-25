@@ -17,7 +17,7 @@ export function Plans() {
               Un plan para cada etapa
             </h2>
             <p className="font-body text-ink-mid text-lg max-w-[46ch] mx-auto">
-              Todos incluyen teleconsultas desde tu hogar. Los precios del piloto se informan en la consulta personalizada.
+              Todos incluyen teleconsultas desde tu hogar. Los precios se informan en la consulta personalizada.
             </p>
           </div>
         </AnimateIn>
