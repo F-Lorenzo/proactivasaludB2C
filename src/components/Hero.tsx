@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ChevronDown, CalendarDays, Users } from 'lucide-react'
+import { ChevronDown, CalendarDays } from 'lucide-react'
 
 export function Hero() {
   return (
@@ -80,46 +80,6 @@ export function Hero() {
                   priority
                   sizes="(max-width: 1024px) 0px, 384px"
                 />
-              </div>
-
-              {/* Pilot badge — top right */}
-              <div className="absolute -top-4 -right-6 bg-brand text-white rounded-2xl px-5 py-3 shadow-elevated text-center">
-                <p className="font-body text-2xl font-bold leading-none">100</p>
-                <p className="font-body text-xs opacity-80 mt-0.5">cupos</p>
-                <p className="font-body text-xs opacity-80">disponibles</p>
-              </div>
-
-              {/* Launch date badge — bottom left */}
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl px-4 py-3 shadow-hover flex items-center gap-2.5">
-                <CalendarDays size={20} className="text-brand flex-shrink-0" aria-hidden="true" />
-                <span className="font-body text-sm font-semibold text-ink leading-tight">
-                  Inicio<br />Junio 2026
-                </span>
-              </div>
-
-              {/* Participants badge — middle left */}
-              <div className="absolute top-1/2 -translate-y-1/2 -left-14 bg-white rounded-xl px-3 py-2.5 shadow-hover flex items-center gap-2">
-                <div className="flex -space-x-2">
-                  {[
-                    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=60&q=80',
-                    'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=60&q=80',
-                    'https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=60&q=80',
-                  ].map((src, i) => (
-                    <div key={i} className="w-7 h-7 rounded-full overflow-hidden border-2 border-white flex-shrink-0">
-                      <Image
-                        src={src}
-                        alt="Participante del programa"
-                        width={28}
-                        height={28}
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div>
-                  <p className="font-body text-xs font-bold text-ink leading-none">+50</p>
-                  <p className="font-body text-[10px] text-ink-soft leading-none mt-0.5">personas</p>
-                </div>
               </div>
 
             </div>
