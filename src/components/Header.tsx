@@ -38,32 +38,39 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-8" aria-label="Navegación principal">
           <Link
             href="/"
-            className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
+            className="font-body font-bold text-base text-ink-mid hover:text-brand transition-colors"
           >
             Inicio
           </Link>
           <Link
             href="/#pilares"
-            className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
+            className="font-body font-bold text-base text-ink-mid hover:text-brand transition-colors"
           >
             El programa
           </Link>
           <Link
             href="/#planes"
-            className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
+            className="font-body font-bold text-base text-ink-mid hover:text-brand transition-colors"
           >
             Planes
           </Link>
           <Link
             href="/#comunidad"
-            className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
+            className="font-body font-bold text-base text-ink-mid hover:text-brand transition-colors"
           >
             Comunidad
           </Link>
           <Link
             href="/quienes-somos"
-            className="font-body text-sm text-ink-mid hover:text-brand transition-colors"
+            className="flex items-center gap-2 font-body font-bold text-base text-ink-mid hover:text-brand transition-colors"
           >
+            <Image
+              src="/proactiva-club.png"
+              alt=""
+              width={28}
+              height={28}
+              className="h-7 w-7 object-contain rounded-full"
+            />
             Quiénes somos
           </Link>
         </nav>
