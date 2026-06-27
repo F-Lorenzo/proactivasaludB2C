@@ -68,8 +68,8 @@ export const PILLARS = [
 
 export const PLANS = [
   {
-    id: 'esencial',
-    name: 'Esencial',
+    id: 'care',
+    name: 'Care',
     tagline: 'Primeros pasos hacia el bienestar',
     persona: 'Para quienes dan el primer paso',
     highlighted: false,
@@ -81,8 +81,8 @@ export const PLANS = [
     ],
   },
   {
-    id: 'activo',
-    name: 'Activo',
+    id: 'plus',
+    name: 'Plus',
     tagline: 'Seguimiento completo e integral',
     persona: 'Ideal para un cambio real',
     highlighted: true,
@@ -96,8 +96,8 @@ export const PLANS = [
     ],
   },
   {
-    id: 'pleno',
-    name: 'Pleno',
+    id: 'prime',
+    name: 'Prime',
     tagline: 'Acompañamiento total y personalizado',
     persona: 'Para quienes quieren lo máximo',
     highlighted: false,
