@@ -64,14 +64,14 @@ export function Header() {
             href="/quienes-somos"
             className="flex items-center gap-2 font-body font-bold text-base text-ink-mid hover:text-brand transition-colors"
           >
+            Quiénes somos
             <Image
               src="/proactiva-club.png"
               alt=""
-              width={28}
-              height={28}
-              className="h-7 w-7 object-contain rounded-full"
+              width={112}
+              height={112}
+              className="h-28 w-28 object-contain rounded-full"
             />
-            Quiénes somos
           </Link>
         </nav>
 
