@@ -3,8 +3,8 @@ import { AnimateIn } from './ui/AnimateIn'
 
 const HOOKS = [
   {
-    image: '/pareja-playa.png',
-    alt: 'Pareja mayor disfrutando juntos en la playa',
+    image: '/pareja-caminando-playa.png',
+    alt: 'Pareja mayor caminando juntos en la playa',
     title: 'Seguir siendo vos mismo',
     description:
       'Independencia, energía y ganas de hacer planes. No querés que te cuiden — querés cuidarte bien.',
