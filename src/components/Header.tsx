@@ -38,31 +38,31 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-8" aria-label="Navegación principal">
           <Link
             href="/"
-            className="font-body font-bold text-base text-ink-mid hover:text-brand transition-colors"
+            className="font-body font-medium text-sm text-ink-mid hover:text-brand transition-colors"
           >
             Inicio
           </Link>
           <Link
             href="/#pilares"
-            className="font-body font-bold text-base text-ink-mid hover:text-brand transition-colors"
+            className="font-body font-medium text-sm text-ink-mid hover:text-brand transition-colors"
           >
             El programa
           </Link>
           <Link
             href="/#planes"
-            className="font-body font-bold text-base text-ink-mid hover:text-brand transition-colors"
+            className="font-body font-medium text-sm text-ink-mid hover:text-brand transition-colors"
           >
             Planes
           </Link>
           <Link
             href="/#comunidad"
-            className="font-body font-bold text-base text-ink-mid hover:text-brand transition-colors"
+            className="font-body font-medium text-sm text-ink-mid hover:text-brand transition-colors"
           >
             Comunidad
           </Link>
           <Link
             href="/quienes-somos"
-            className="flex items-center gap-2 font-body font-bold text-base text-ink-mid hover:text-brand transition-colors"
+            className="flex items-center gap-2 font-body font-medium text-sm text-ink-mid hover:text-brand transition-colors"
           >
             Quiénes somos
             <Image
