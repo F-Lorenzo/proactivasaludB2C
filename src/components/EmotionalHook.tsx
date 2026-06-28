@@ -10,8 +10,8 @@ const HOOKS = [
       'Independencia, energía y ganas de hacer planes. No querés que te cuiden — querés cuidarte bien.',
   },
   {
-    image: '/pareja-haciendo-ejercicio.png',
-    alt: 'Pareja mayor haciendo ejercicio juntos al aire libre',
+    image: '/vieja-elongando.png',
+    alt: 'Mujer mayor elongando',
     title: 'Disfrutar lo que importa',
     description:
       '¡Esta es tu etapa! Con más tiempo, más libertad y más ganas que nunca. Viajá, reíte, disfrutá cada momento con la energía y la vitalidad que merecés.',
