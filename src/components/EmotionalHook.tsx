@@ -30,7 +30,7 @@ export function EmotionalHook() {
     <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <AnimateIn>
-          <p className="font-body text-center text-brand text-sm tracking-widest uppercase font-bold mb-14">
+          <p className="font-body text-center text-brand text-lg tracking-widest uppercase font-bold mb-14 transition-all duration-500 ease-out hover:tracking-wider hover:text-brand-dark">
             ¿Por qué Proactiva Salud?
           </p>
         </AnimateIn>
