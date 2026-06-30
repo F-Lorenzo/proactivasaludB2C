@@ -22,7 +22,7 @@ export function Footer() {
               />
             </div>
             <p className="font-body text-white/45 text-sm max-w-xs leading-relaxed">
-              Programa integral de bienestar para mayores de 50. Lanzamiento — Junio 2026.
+              La comunidad +50 más saludable del mundo. Bienestar integral para mayores de 50.
             </p>
           </div>
 
@@ -33,11 +33,12 @@ export function Footer() {
             </p>
             <ul className="flex flex-col gap-2.5">
               {[
-                { label: 'Quiénes somos', href: '/quienes-somos' },
-                { label: 'Los 5 pilares', href: '/#pilares' },
+                { label: 'Inicio', href: '/' },
+                { label: 'El programa', href: '/#pilares' },
                 { label: 'Planes', href: '/#planes' },
-                { label: 'Comunidad', href: '/#comunidad' },
-                { label: 'Inscribirse', href: '/#inscripcion' },
+                { label: 'Club +50', href: '/#comunidad' },
+                { label: 'Quiénes somos', href: '/quienes-somos' },
+                { label: 'Unirme', href: '/#inscripcion' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

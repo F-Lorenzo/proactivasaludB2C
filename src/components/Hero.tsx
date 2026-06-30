@@ -44,7 +44,7 @@ export function Hero() {
                 href="#inscripcion"
                 className="inline-flex items-center justify-center bg-brand text-white font-body font-semibold text-base px-8 py-4 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-elevated"
               >
-                Reservar mi cupo
+                Unirme al programa de bienestar integral
               </a>
               <a
                 href="#pilares"

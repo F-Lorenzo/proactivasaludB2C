@@ -58,7 +58,7 @@ export function Header() {
             href="/#comunidad"
             className="font-body font-black text-sm text-ink-mid hover:text-brand transition-colors"
           >
-            Comunidad
+            Club +50
           </Link>
           <Link
             href="/quienes-somos"
@@ -80,7 +80,7 @@ export function Header() {
           href="/#inscripcion"
           className="bg-brand text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-hover"
         >
-          Reservar mi cupo
+          Unirme al programa de bienestar integral
         </Link>
       </div>
     </header>

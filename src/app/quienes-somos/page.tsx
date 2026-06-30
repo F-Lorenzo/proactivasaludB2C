@@ -80,7 +80,7 @@ export default function QuienesSomos() {
                   href="/#inscripcion"
                   className="self-start inline-flex items-center gap-2 bg-brand text-white font-body font-semibold text-sm px-7 py-3.5 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-elevated"
                 >
-                  Reservar mi cupo
+                  Unirme al programa de bienestar integral
                 </Link>
               </div>
 
@@ -187,7 +187,7 @@ export default function QuienesSomos() {
               href="/#inscripcion"
               className="inline-flex items-center justify-center bg-white text-brand font-body font-semibold text-sm px-9 py-3.5 rounded-full hover:bg-brand-light transition-colors shadow-elevated"
             >
-              Reservar mi cupo
+              Unirme al programa de bienestar integral
             </Link>
           </div>
         </section>

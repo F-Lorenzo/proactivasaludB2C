@@ -34,20 +34,20 @@ export function CTASection() {
           {/* ── Left: copy ────────────────────────────────────────────── */}
           <div className="flex flex-col gap-6 lg:pt-4">
             <p className="font-body text-brand-light/60 text-xs tracking-widest uppercase font-semibold">
-              Empezá hoy
+              Comunidad Proactiva · Club +50
             </p>
             <h2 className="font-display text-4xl lg:text-5xl text-white leading-tight">
-              Reservá tu cupo
+              Unite a la comunidad<br />+50 más saludable<br />del mundo
             </h2>
             <p className="font-body text-xl text-white/65 leading-relaxed max-w-[42ch]">
-              Dejanos tus datos y un asesor te va a contactar para contarte todo sobre el programa de Junio 2026.
+              Dejanos tus datos y te contamos cómo ser parte de la comunidad Proactiva y el Club +50.
             </p>
 
             <ul className="flex flex-col gap-4 mt-2">
               {[
-                'Sin compromiso — solo información personalizada',
-                'Los cupos son limitados: 100 personas',
-                'Te contactamos a la brevedad para confirmar tu lugar',
+                'Una comunidad de personas que eligen vivir mejor',
+                'Acceso a profesionales, contenidos y actividades grupales',
+                'Te contactamos a la brevedad para darte la bienvenida',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3">
                   <CircleCheck
@@ -72,7 +72,7 @@ export function CTASection() {
                   ¡Gracias, {nombre}!
                 </h3>
                 <p className="font-body text-ink-mid max-w-xs leading-relaxed">
-                  Un asesor de Proactiva Salud se comunicará con vos pronto para confirmar tu lugar en el programa de Junio 2026.
+                  Un asesor de Proactiva Salud se comunicará con vos pronto para darte la bienvenida a la comunidad +50 más saludable del mundo.
                 </p>
               </div>
             ) : (
@@ -186,7 +186,7 @@ export function CTASection() {
                   className="mt-1 w-full flex items-center justify-center gap-2.5 bg-brand text-white font-body font-semibold text-base py-4 rounded-full hover:bg-brand-dark transition-colors shadow-button"
                 >
                   <Send size={18} aria-hidden="true" />
-                  Reservar mi cupo
+                  Unirme al programa de bienestar integral
                 </button>
 
                 <p className="font-body text-xs text-ink-soft text-center">

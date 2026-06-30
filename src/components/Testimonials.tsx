@@ -27,32 +27,32 @@ const COMMUNITY_FEATURES = [
 
 const GALLERY = [
   {
-    src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
-    alt: 'Hombre argentino mayor de 50',
+    src: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=120&q=80',
+    alt: 'Hombre mayor de 58 de rasgos italo-argentinos',
     name: 'Roberto, 58',
     city: 'Buenos Aires',
   },
   {
-    src: 'https://images.unsplash.com/photo-1566616213894-2d4e1baee5d8?auto=format&fit=crop&w=120&q=80',
-    alt: 'Mujer mayor de 60',
+    src: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=120&q=80',
+    alt: 'Mujer mayor de 62 de rasgos italo-argentinos',
     name: 'Graciela, 62',
     city: 'Córdoba',
   },
   {
-    src: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=120&q=80',
-    alt: 'Hombre argentino mayor de 50',
+    src: 'https://images.unsplash.com/photo-1544168190-79c17527004f?auto=format&fit=crop&w=120&q=80',
+    alt: 'Hombre mayor de 55 de rasgos europeos',
     name: 'Carlos, 55',
     city: 'Rosario',
   },
   {
-    src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80',
-    alt: 'Hombre argentino mayor de 50',
+    src: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=120&q=80',
+    alt: 'Hombre mayor de 60 de rasgos italo-argentinos',
     name: 'Marcelo, 60',
     city: 'Mendoza',
   },
   {
-    src: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=120&q=80',
-    alt: 'Mujer mayor de 50',
+    src: 'https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?auto=format&fit=crop&w=120&q=80',
+    alt: 'Mujer mayor de 54 de rasgos europeos',
     name: 'Marta, 54',
     city: 'La Plata',
   },
