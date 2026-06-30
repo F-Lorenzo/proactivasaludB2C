@@ -16,7 +16,7 @@ const PILLAR_IMAGES: Record<string, { src: string; alt: string }> = {
     alt: 'Grupo de personas mayores de 50 haciendo ejercicio juntos en una plaza',
   },
   '03': {
-    src: 'https://images.unsplash.com/photo-1666101042631-b3f606363e98?auto=format&fit=crop&w=600&q=85',
+    src: '/pareja-tomando-sol.png',
     alt: 'Señora mayor hablando con su psicólogo por videollamada desde casa',
   },
   '04': {
