@@ -5,13 +5,6 @@ import Image from 'next/image'
 import { AnimateIn } from './ui/AnimateIn'
 import { TrendingUp } from 'lucide-react'
 
-const METRICS = [
-  { pct: 73, label: 'mejoró su nivel de energía diaria', timeframe: 'en 12 semanas', color: '#2D7A4F' },
-  { pct: 62, label: 'mejoró su calidad de sueño', timeframe: 'en 8 semanas', color: '#2D7A4F' },
-  { pct: 54, label: 'redujo el dolor articular', timeframe: 'en 16 semanas', color: '#2D7A4F' },
-  { pct: 58, label: 'redujo marcadores de estrés', timeframe: 'en 12 semanas', color: '#2D7A4F' },
-]
-
 // SVG path for a smooth upward trend line (weeks 0–12, normalized to 200×80 viewBox)
 const TREND_POINTS = [
   [0, 72], [20, 66], [40, 55], [70, 44], [100, 32], [140, 20], [180, 10], [200, 6],
@@ -26,54 +19,6 @@ function buildArea(pts: number[][], h: number) {
     `M ${pts[0][0]} ${h} ` +
     pts.map((p) => `L ${p[0]} ${p[1]}`).join(' ') +
     ` L ${pts[pts.length - 1][0]} ${h} Z`
-  )
-}
-
-function StatBar({
-  pct,
-  label,
-  timeframe,
-  color,
-  inView,
-  delay,
-}: {
-  pct: number
-  label: string
-  timeframe: string
-  color: string
-  inView: boolean
-  delay: number
-}) {
-  const [width, setWidth] = useState(0)
-  useEffect(() => {
-    if (!inView) return
-    const t = setTimeout(() => setWidth(pct), delay)
-    return () => clearTimeout(t)
-  }, [inView, pct, delay])
-
-  return (
-    <div className="flex flex-col gap-2">
-      <div className="flex items-baseline justify-between gap-4">
-        <p className="font-body text-sm font-semibold text-ink leading-snug">{label}</p>
-        <span
-          className="font-display text-3xl font-bold leading-none flex-shrink-0"
-          style={{ color }}
-        >
-          {pct}%
-        </span>
-      </div>
-      <div className="h-2.5 w-full bg-brand-light/60 rounded-full overflow-hidden">
-        <div
-          className="h-full rounded-full transition-all ease-out"
-          style={{
-            width: `${width}%`,
-            backgroundColor: color,
-            transitionDuration: '1200ms',
-          }}
-        />
-      </div>
-      <p className="font-body text-xs text-ink-soft">{timeframe}</p>
-    </div>
   )
 }
 
@@ -122,14 +67,18 @@ export function HealthStats() {
           {/* ── Left: metrics + trend chart ─────────────────────────── */}
           <div ref={ref} className="flex flex-col gap-10">
 
-            {/* Animated progress bars */}
-            <div className="flex flex-col gap-7">
-              {METRICS.map((m, i) => (
-                <AnimateIn key={m.label} delay={i * 80}>
-                  <StatBar {...m} inView={inView} delay={i * 180} />
-                </AnimateIn>
-              ))}
-            </div>
+            {/* Stats graphic */}
+            <AnimateIn>
+              <div className="relative w-full aspect-[689/394] rounded-3xl overflow-hidden">
+                <Image
+                  src="/grafico.png"
+                  alt="Gráfico de resultados: energía diaria +73%, calidad de sueño +62%, dolor articular -54%, marcadores de estrés -58%"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </AnimateIn>
 
             {/* SVG Trend chart */}
             <AnimateIn delay={320}>
@@ -202,8 +151,8 @@ export function HealthStats() {
               {/* Main large photo */}
               <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1702648159782-712c96a07028?auto=format&fit=crop&w=800&q=85"
-                  alt="Mujer argentina mayor de 50 años trotando activamente en el parque"
+                  src="/pareja-corriendo.png"
+                  alt="Pareja mayor de 50 años corriendo activamente"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 45vw"
