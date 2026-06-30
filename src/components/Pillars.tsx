@@ -12,7 +12,7 @@ const PILLAR_IMAGES: Record<string, { src: string; alt: string }> = {
     alt: 'Persona mayor de 50 preparando comida saludable en casa',
   },
   '02': {
-    src: 'https://images.unsplash.com/photo-1758798458635-f01402b40919?auto=format&fit=crop&w=600&q=85',
+    src: '/viejos-gaga.png',
     alt: 'Grupo de personas mayores de 50 haciendo ejercicio juntos en una plaza',
   },
   '03': {
