@@ -69,7 +69,7 @@ export function HealthStats() {
 
             {/* Stats graphic */}
             <AnimateIn>
-              <div className="relative w-full aspect-[689/394] rounded-3xl overflow-hidden">
+              <div className="relative w-full aspect-[1491/1055] rounded-3xl overflow-hidden bg-white">
                 <Image
                   src="/grafico.png"
                   alt="Gráfico de resultados: energía diaria +73%, calidad de sueño +62%, dolor articular -54%, marcadores de estrés -58%"
