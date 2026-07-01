@@ -181,7 +181,7 @@ export default function QuienesSomos() {
               Empezá hoy a vivir con más energía y bienestar
             </h2>
             <p className="font-body text-base text-white/65 max-w-[44ch] leading-relaxed">
-              Sumate a Proactiva Salud. Solo 100 cupos disponibles para Junio 2026.
+              Sumate a Proactiva Salud y empezá a cuidar tu bienestar integral hoy.
             </p>
             <Link
               href="/#inscripcion"
