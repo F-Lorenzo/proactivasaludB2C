@@ -5,7 +5,7 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-ink py-12">
+    <footer className="bg-brand-dark py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Top row */}
@@ -21,14 +21,14 @@ export function Footer() {
                 className="h-16 w-auto object-contain brightness-0 invert"
               />
             </div>
-            <p className="font-body text-white/45 text-sm max-w-xs leading-relaxed">
+            <p className="font-body text-white text-sm max-w-xs leading-relaxed">
               La comunidad +50 más saludable del mundo. Bienestar integral para mayores de 50.
             </p>
           </div>
 
           {/* Nav */}
           <div>
-            <p className="font-body text-white/25 text-xs uppercase tracking-widest mb-4">
+            <p className="font-body text-white/70 text-xs uppercase tracking-widest mb-4">
               Programa
             </p>
             <ul className="flex flex-col gap-2.5">
@@ -43,7 +43,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-body text-white/50 text-sm hover:text-white transition-colors"
+                    className="font-body text-white text-sm hover:text-white/70 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -54,15 +54,15 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="font-body text-white/25 text-xs uppercase tracking-widest mb-4">
+            <p className="font-body text-white/70 text-xs uppercase tracking-widest mb-4">
               Contacto
             </p>
-            <p className="font-body text-white/45 text-sm leading-relaxed max-w-[18ch]">
+            <p className="font-body text-white text-sm leading-relaxed max-w-[18ch]">
               Completá el formulario y te contactamos a la brevedad.
             </p>
             <a
               href="#inscripcion"
-              className="inline-block mt-3 font-body text-brand-muted text-sm font-semibold hover:text-white transition-colors"
+              className="inline-block mt-3 font-body text-white text-sm font-semibold hover:text-white/70 transition-colors"
             >
               Ir al formulario →
             </a>
@@ -70,15 +70,15 @@ export function Footer() {
         </div>
 
         {/* Divider + legal */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="font-body text-white/25 text-xs">
+        <div className="pt-8 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="font-body text-white/70 text-xs">
             © {year} Proactiva Salud. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
-            <Link href="/privacidad" className="font-body text-white/25 text-xs hover:text-white/50 transition-colors">
+            <Link href="/privacidad" className="font-body text-white/70 text-xs hover:text-white transition-colors">
               Política de privacidad
             </Link>
-            <Link href="/terminos" className="font-body text-white/25 text-xs hover:text-white/50 transition-colors">
+            <Link href="/terminos" className="font-body text-white/70 text-xs hover:text-white transition-colors">
               Términos y condiciones
             </Link>
           </div>
