@@ -86,7 +86,7 @@ export const PLANS = [
     tagline: 'Seguimiento completo e integral',
     persona: 'Ideal para un cambio real',
     highlighted: true,
-    badge: 'Más completo',
+    badge: 'Más elegido',
     features: [
       '2 consultas de Nutrición por mes',
       'Plan de Actividad Física + 1 seguimiento',
