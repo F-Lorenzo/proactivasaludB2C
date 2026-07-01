@@ -65,9 +65,11 @@ export function Header() {
             className="flex items-center gap-2 font-body font-black text-sm text-ink-mid hover:text-brand transition-colors"
           >
             Quiénes somos
+          </Link>
+          <Link href="/#comunidad">
             <Image
               src="/proactiva-club.png"
-              alt=""
+              alt="Club +50"
               width={112}
               height={112}
               className="h-28 w-28 object-contain rounded-full"
