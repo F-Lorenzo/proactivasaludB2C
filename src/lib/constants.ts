@@ -10,7 +10,7 @@ export const PILLARS = [
       'Sistema inmune más fuerte',
       'Mejor salud emocional y concentración',
     ],
-    format: '2 teleconsultas/mes con nutricionista especializado +50',
+    format: 'Seguimiento continuo con nutricionista especializado +50',
   },
   {
     number: '02',
