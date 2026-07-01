@@ -90,7 +90,7 @@ export const PLANS = [
     features: [
       '2 consultas de Nutrición por mes',
       'Plan de Actividad Física + 1 seguimiento',
-      '1 sesión de Salud Emocional por mes',
+      '1 sesión de Bienestar Emocional por mes',
       'Charlas Virtuales de Coaching',
       'Seguimiento continuo por teleconsulta',
     ],
@@ -104,7 +104,7 @@ export const PLANS = [
     features: [
       '2 consultas de Nutrición por mes',
       'Plan de Actividad Física + seguimientos frecuentes',
-      'Sesiones de Salud Emocional ampliadas',
+      'Sesiones de Bienestar Emocional ampliadas',
       'Coaching ontológico personalizado',
       'Prioridad en agenda y soporte extendido',
       'Informes de progreso mensuales',
