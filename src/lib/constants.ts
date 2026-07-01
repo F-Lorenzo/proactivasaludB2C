@@ -36,7 +36,7 @@ export const PILLARS = [
       'Vínculos familiares más fuertes',
       'Herramientas para adaptarte a los cambios',
     ],
-    format: 'Psicología conductual + coaching emocional · 1 consulta/mes',
+    format: 'Psicología conductual + coaching emocional',
   },
   {
     number: '04',
