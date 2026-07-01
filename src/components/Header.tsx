@@ -27,9 +27,9 @@ export function Header() {
           <Image
             src="/ProActiva-NUEVA.png"
             alt="Proactiva Salud"
-            width={192}
-            height={58}
-            className="h-12 lg:h-[77px] w-auto object-contain"
+            width={250}
+            height={75}
+            className="h-[62px] lg:h-[100px] w-auto object-contain"
             priority
           />
         </Link>
