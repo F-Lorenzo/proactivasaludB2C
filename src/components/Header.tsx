@@ -3,9 +3,20 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Menu, X } from 'lucide-react'
+
+const NAV_LINKS = [
+  { label: 'Inicio', href: '/' },
+  { label: 'El programa', href: '/#pilares' },
+  { label: 'Planes', href: '/#planes' },
+  { label: 'Club +50', href: '/#comunidad' },
+  { label: 'Quiénes somos', href: '/quienes-somos' },
+  { label: 'Página Central', href: 'https://proactivasalud.com' },
+]
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -36,42 +47,15 @@ export function Header() {
 
         {/* Nav */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Navegación principal">
-          <Link
-            href="/"
-            className="font-body font-black text-sm text-ink-mid hover:text-brand transition-colors"
-          >
-            Inicio
-          </Link>
-          <Link
-            href="/#pilares"
-            className="font-body font-black text-sm text-ink-mid hover:text-brand transition-colors"
-          >
-            El programa
-          </Link>
-          <Link
-            href="/#planes"
-            className="font-body font-black text-sm text-ink-mid hover:text-brand transition-colors"
-          >
-            Planes
-          </Link>
-          <Link
-            href="/#comunidad"
-            className="font-body font-black text-sm text-ink-mid hover:text-brand transition-colors"
-          >
-            Club +50
-          </Link>
-          <Link
-            href="/quienes-somos"
-            className="flex items-center gap-2 font-body font-black text-sm text-ink-mid hover:text-brand transition-colors"
-          >
-            Quiénes somos
-          </Link>
-          <Link
-            href="https://proactivasalud.com"
-            className="font-body font-black text-sm text-ink-mid hover:text-brand transition-colors"
-          >
-            Página Central
-          </Link>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="font-body font-black text-[11px] text-ink-mid hover:text-brand transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
           <Link href="/#comunidad">
             <Image
               src="/proactiva-club.png"
@@ -86,11 +70,48 @@ export function Header() {
         {/* CTA */}
         <Link
           href="/#inscripcion"
-          className="bg-brand text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-hover"
+          className="hidden md:inline-flex bg-brand text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-hover"
         >
           Unirme al programa de bienestar integral
         </Link>
+
+        {/* Mobile menu toggle */}
+        <button
+          type="button"
+          onClick={() => setMobileOpen((v) => !v)}
+          className="md:hidden text-ink p-2 -mr-2"
+          aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={mobileOpen}
+        >
+          {mobileOpen ? <X size={26} /> : <Menu size={26} />}
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <nav
+          className="md:hidden bg-white shadow-card border-t border-brand-muted/40 px-6 py-4 flex flex-col gap-1"
+          aria-label="Navegación móvil"
+        >
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileOpen(false)}
+              className="font-body font-black text-sm text-ink-mid hover:text-brand transition-colors py-2.5"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/#inscripcion"
+            onClick={() => setMobileOpen(false)}
+            className="mt-2 bg-brand text-white font-body font-semibold text-sm px-5 py-3 rounded-full text-center hover:bg-brand-dark transition-colors shadow-button"
+          >
+            Unirme al programa de bienestar integral
+          </Link>
+        </nav>
+      )}
     </header>
   )
 }
