@@ -66,6 +66,12 @@ export function Header() {
           >
             Quiénes somos
           </Link>
+          <Link
+            href="https://proactivasalud.com"
+            className="font-body font-black text-sm text-ink-mid hover:text-brand transition-colors"
+          >
+            Página Central
+          </Link>
           <Link href="/#comunidad">
             <Image
               src="/proactiva-club.png"
