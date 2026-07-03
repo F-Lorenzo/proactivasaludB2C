@@ -51,7 +51,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-body font-black text-[11px] text-ink-mid hover:text-brand transition-colors"
+              className="font-body font-black text-[13px] text-ink-mid hover:text-brand transition-colors"
             >
               {link.label}
             </Link>
@@ -72,7 +72,7 @@ export function Header() {
           href="/#inscripcion"
           className="hidden md:inline-flex bg-brand text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-hover"
         >
-          Unirme al programa de bienestar integral
+          Sumate ahora
         </Link>
 
         {/* Mobile menu toggle */}
@@ -108,7 +108,7 @@ export function Header() {
             onClick={() => setMobileOpen(false)}
             className="mt-2 bg-brand text-white font-body font-semibold text-sm px-5 py-3 rounded-full text-center hover:bg-brand-dark transition-colors shadow-button"
           >
-            Unirme al programa de bienestar integral
+            Sumate ahora
           </Link>
         </nav>
       )}
