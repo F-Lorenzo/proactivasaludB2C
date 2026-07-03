@@ -38,9 +38,9 @@ export function Header() {
           <Image
             src="/ProActiva-NUEVA.png"
             alt="Proactiva Salud"
-            width={250}
-            height={75}
-            className="h-[62px] lg:h-[100px] w-auto object-contain"
+            width={296}
+            height={88}
+            className="h-[6.5rem] w-auto object-contain"
             priority
           />
         </Link>
@@ -51,7 +51,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-body font-black text-[13px] text-ink-mid hover:text-brand transition-colors"
+              className="font-body font-semibold text-[13.5px] text-ink-mid hover:text-brand transition-colors"
             >
               {link.label}
             </Link>
@@ -98,7 +98,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="font-body font-black text-sm text-ink-mid hover:text-brand transition-colors py-2.5"
+              className="font-body font-semibold text-[15px] text-ink-mid hover:text-brand transition-colors py-2.5"
             >
               {link.label}
             </Link>
