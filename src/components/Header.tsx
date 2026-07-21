@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
@@ -16,7 +15,6 @@ const NAV_LINKS = [
 ]
 
 export function Header() {
-  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -26,15 +24,10 @@ export function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // The home Hero has a dark background up top, so the nav needs light text until scrolled.
-  const onDarkHero = pathname === '/' && !scrolled
-
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/92 backdrop-blur-md shadow-card'
-          : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${
+        scrolled ? 'shadow-card' : ''
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 h-16 lg:h-24 flex items-center justify-between">
@@ -56,9 +49,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`font-body font-black text-[16px] transition-colors ${
-                onDarkHero ? 'text-white hover:text-brand-muted' : 'text-ink-mid hover:text-brand'
-              }`}
+              className="font-body font-black text-[16px] text-ink-mid hover:text-brand transition-colors"
             >
               {link.label}
             </Link>
@@ -86,7 +77,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setMobileOpen((v) => !v)}
-          className={`md:hidden p-2 -mr-2 ${onDarkHero ? 'text-white' : 'text-ink'}`}
+          className="md:hidden text-ink p-2 -mr-2"
           aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={mobileOpen}
         >
