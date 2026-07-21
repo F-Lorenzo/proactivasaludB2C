@@ -64,7 +64,7 @@ export function Hero() {
               {/* Hero photo */}
               <div className="w-full aspect-[4/5] rounded-[2rem] overflow-hidden relative">
                 <Image
-                  src="/imagen-portada-proactiva.png"
+                  src="/active-senior-couple-outdoor-hike-countryside-together.jpg"
                   alt="Imagen de portada Proactiva Salud"
                   fill
                   className="object-cover"
