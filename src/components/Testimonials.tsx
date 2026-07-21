@@ -33,7 +33,7 @@ const GALLERY = [
     city: 'Buenos Aires',
   },
   {
-    src: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=120&q=80',
+    src: '/graciela-avatar.jpg',
     alt: 'Mujer mayor de 62 de rasgos italo-argentinos',
     name: 'Graciela, 62',
     city: 'Córdoba',
@@ -51,7 +51,7 @@ const GALLERY = [
     city: 'Mendoza',
   },
   {
-    src: 'https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?auto=format&fit=crop&w=120&q=80',
+    src: '/marta-avatar.jpg',
     alt: 'Mujer mayor de 54 de rasgos europeos',
     name: 'Marta, 54',
     city: 'La Plata',
