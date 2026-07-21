@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
@@ -15,6 +16,7 @@ const NAV_LINKS = [
 ]
 
 export function Header() {
+  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -23,6 +25,9 @@ export function Header() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  // The home Hero has a dark background up top, so the nav needs light text until scrolled.
+  const onDarkHero = pathname === '/' && !scrolled
 
   return (
     <header
@@ -51,7 +56,9 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-body font-black text-[16px] text-ink-mid hover:text-brand transition-colors"
+              className={`font-body font-black text-[16px] transition-colors ${
+                onDarkHero ? 'text-white hover:text-brand-muted' : 'text-ink-mid hover:text-brand'
+              }`}
             >
               {link.label}
             </Link>
@@ -79,7 +86,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setMobileOpen((v) => !v)}
-          className="md:hidden text-ink p-2 -mr-2"
+          className={`md:hidden p-2 -mr-2 ${onDarkHero ? 'text-white' : 'text-ink'}`}
           aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={mobileOpen}
         >
