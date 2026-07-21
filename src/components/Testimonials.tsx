@@ -112,8 +112,8 @@ export function Testimonials() {
                 </div>
                 <div className="relative aspect-[3/2] rounded-2xl overflow-hidden">
                   <Image
-                    src="/gente-vieja-en-grupo.png"
-                    alt="Grupo de personas mayores compartiendo actividades"
+                    src="/gente-vieja-en-grupo.jpg"
+                    alt="Grupo de amigos mayores riendo mientras caminan juntos"
                     fill
                     className="object-cover object-top"
                     sizes="200px"

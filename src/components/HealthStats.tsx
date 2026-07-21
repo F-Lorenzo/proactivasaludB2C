@@ -197,8 +197,8 @@ export function HealthStats() {
               {/* Third full-width photo */}
               <div className="relative w-full aspect-[16/7] rounded-2xl overflow-hidden">
                 <Image
-                  src="/gente-vieja-en-grupo.png"
-                  alt="Grupo de adultos mayores compartiendo un momento juntos"
+                  src="/gente-vieja-en-grupo.jpg"
+                  alt="Grupo de amigos mayores riendo mientras caminan juntos"
                   fill
                   className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 45vw"
