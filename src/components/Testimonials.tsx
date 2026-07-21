@@ -103,8 +103,8 @@ export function Testimonials() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-[3/2] rounded-2xl overflow-hidden">
                   <Image
-                    src="/viejos-felices.png"
-                    alt="Adultos mayores felices disfrutando juntos"
+                    src="/viejos-felices.jpg"
+                    alt="Mujeres mayores felices compartiendo un momento en un café"
                     fill
                     className="object-cover"
                     sizes="200px"
