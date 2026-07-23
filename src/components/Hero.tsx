@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ChevronDown, TrendingUp, ShieldCheck, Users, Activity } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 export function Hero() {
   return (
@@ -49,7 +49,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* ── Visual: full-bleed photo + floating stat cards ──────────── */}
+          {/* ── Visual: full-bleed photo ─────────────────────────────────── */}
           <div className="relative hidden lg:block">
             <Image
               src="/active-senior-couple-outdoor-hike-countryside-together.jpg"
@@ -63,56 +63,6 @@ export function Hero() {
               aria-hidden="true"
               className="absolute inset-0 bg-gradient-to-r from-brand-dark/70 via-brand-dark/10 to-transparent"
             />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-gradient-to-t from-brand-dark/50 via-transparent to-brand-dark/20"
-            />
-
-            {/* Stat card — top left */}
-            <div className="absolute top-12 left-8 xl:left-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem] animate-float [animation-delay:0s]">
-              <div className="flex items-center gap-2 mb-1.5">
-                <TrendingUp size={14} className="text-brand-muted" aria-hidden="true" />
-                <p className="font-body text-[11px] font-semibold text-white/60 uppercase tracking-widest">
-                  Energía diaria
-                </p>
-              </div>
-              <p className="font-display text-2xl text-white font-bold leading-none">+73%</p>
-            </div>
-
-            {/* Stat card — top right */}
-            <div className="absolute top-20 right-8 xl:right-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem] animate-float [animation-delay:1.5s]">
-              <div className="flex items-center gap-2 mb-1.5">
-                <ShieldCheck size={14} className="text-brand-muted" aria-hidden="true" />
-                <p className="font-body text-[11px] font-semibold text-white/60 uppercase tracking-widest">
-                  Prevención activa
-                </p>
-              </div>
-              <p className="font-display text-2xl text-white font-bold leading-none">4 pilares</p>
-              <p className="font-body text-xs text-white/50 mt-0.5">de bienestar integral</p>
-            </div>
-
-            {/* Stat card — bottom left */}
-            <div className="absolute bottom-24 left-8 xl:left-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem] animate-float [animation-delay:3s]">
-              <div className="flex items-center gap-2 mb-1.5">
-                <Users size={14} className="text-brand-muted" aria-hidden="true" />
-                <p className="font-body text-[11px] font-semibold text-white/60 uppercase tracking-widest">
-                  Gen. Silver
-                </p>
-              </div>
-              <p className="font-display text-2xl text-white font-bold leading-none">+50/+60</p>
-              <p className="font-body text-xs text-white/50 mt-0.5">tu mejor década</p>
-            </div>
-
-            {/* Stat card — bottom right */}
-            <div className="absolute bottom-14 right-8 xl:right-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem] animate-float [animation-delay:4.5s]">
-              <div className="flex items-center gap-2 mb-1.5">
-                <Activity size={14} className="text-brand-muted" aria-hidden="true" />
-                <p className="font-body text-[11px] font-semibold text-white/60 uppercase tracking-widest">
-                  Dolor articular
-                </p>
-              </div>
-              <p className="font-display text-2xl text-white font-bold leading-none">-54%</p>
-            </div>
           </div>
 
         </div>
