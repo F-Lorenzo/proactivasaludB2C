@@ -69,7 +69,7 @@ export function Hero() {
             />
 
             {/* Stat card — top left */}
-            <div className="absolute top-12 left-8 xl:left-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem]">
+            <div className="absolute top-12 left-8 xl:left-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem] animate-float [animation-delay:0s]">
               <div className="flex items-center gap-2 mb-1.5">
                 <TrendingUp size={14} className="text-brand-muted" aria-hidden="true" />
                 <p className="font-body text-[11px] font-semibold text-white/60 uppercase tracking-widest">
@@ -80,7 +80,7 @@ export function Hero() {
             </div>
 
             {/* Stat card — top right */}
-            <div className="absolute top-20 right-8 xl:right-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem]">
+            <div className="absolute top-20 right-8 xl:right-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem] animate-float [animation-delay:1.5s]">
               <div className="flex items-center gap-2 mb-1.5">
                 <ShieldCheck size={14} className="text-brand-muted" aria-hidden="true" />
                 <p className="font-body text-[11px] font-semibold text-white/60 uppercase tracking-widest">
@@ -91,21 +91,8 @@ export function Hero() {
               <p className="font-body text-xs text-white/50 mt-0.5">de bienestar integral</p>
             </div>
 
-            {/* Center card — white, headline */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl px-7 py-6 shadow-elevated max-w-xs">
-              <p className="font-body text-xs font-semibold text-brand uppercase tracking-widest mb-2">
-                Proactiva Salud
-              </p>
-              <p className="font-display text-xl text-ink font-bold leading-snug mb-2">
-                Bienestar activo,<br />no solo cobertura
-              </p>
-              <p className="font-body text-sm text-ink-mid leading-relaxed">
-                Comunidad +50 con seguimiento profesional real
-              </p>
-            </div>
-
             {/* Stat card — bottom left */}
-            <div className="absolute bottom-24 left-8 xl:left-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem]">
+            <div className="absolute bottom-24 left-8 xl:left-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem] animate-float [animation-delay:3s]">
               <div className="flex items-center gap-2 mb-1.5">
                 <Users size={14} className="text-brand-muted" aria-hidden="true" />
                 <p className="font-body text-[11px] font-semibold text-white/60 uppercase tracking-widest">
@@ -117,7 +104,7 @@ export function Hero() {
             </div>
 
             {/* Stat card — bottom right */}
-            <div className="absolute bottom-14 right-8 xl:right-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem]">
+            <div className="absolute bottom-14 right-8 xl:right-12 bg-ink/85 backdrop-blur-sm rounded-2xl px-5 py-4 shadow-elevated max-w-[13rem] animate-float [animation-delay:4.5s]">
               <div className="flex items-center gap-2 mb-1.5">
                 <Activity size={14} className="text-brand-muted" aria-hidden="true" />
                 <p className="font-body text-[11px] font-semibold text-white/60 uppercase tracking-widest">
