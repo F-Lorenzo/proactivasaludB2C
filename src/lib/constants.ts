@@ -77,7 +77,7 @@ export const PLANS = [
       '1 consulta de Nutrición por mes',
       'Plan de Actividad Física mensual',
       'Charlas Virtuales de Bienestar',
-      'Seguimiento por teleconsulta',
+      'Acompañamiento de agente digital',
     ],
   },
   {
@@ -88,7 +88,7 @@ export const PLANS = [
     highlighted: true,
     badge: 'Más elegido',
     features: [
-      '2 consultas de Nutrición por mes',
+      '1 consulta de Nutrición por mes',
       'Plan de Actividad Física + 1 seguimiento',
       '1 sesión de Bienestar Emocional por mes',
       'Charlas Virtuales de Coaching',
