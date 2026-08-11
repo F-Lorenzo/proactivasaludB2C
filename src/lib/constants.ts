@@ -105,7 +105,7 @@ export const PLANS = [
       '2 consultas de Nutrición por mes',
       'Plan de Actividad Física + seguimientos frecuentes',
       'Sesiones de Bienestar Emocional ampliadas',
-      'Coaching ontológico personalizado',
+      'Coaching ontológico',
       'Prioridad en agenda y soporte extendido',
       'Informes de progreso mensuales',
     ],
