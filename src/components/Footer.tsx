@@ -61,6 +61,18 @@ export function Footer() {
               Completá el formulario y te contactamos a la brevedad.
             </p>
             <a
+              href="mailto:info@proactivasalud.com"
+              className="block mt-3 font-body text-white text-sm hover:text-white/70 transition-colors"
+            >
+              info@proactivasalud.com
+            </a>
+            <a
+              href="tel:+541176781555"
+              className="block mt-1 font-body text-white text-sm hover:text-white/70 transition-colors"
+            >
+              +54 11 7678-1555
+            </a>
+            <a
               href="#inscripcion"
               className="inline-block mt-3 font-body text-white text-sm font-semibold hover:text-white/70 transition-colors"
             >
@@ -70,18 +82,10 @@ export function Footer() {
         </div>
 
         {/* Divider + legal */}
-        <div className="pt-8 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-white/20 flex justify-center sm:justify-start">
           <p className="font-body text-white/70 text-xs">
             © {year} Proactiva Salud. Todos los derechos reservados.
           </p>
-          <div className="flex gap-6">
-            <Link href="/privacidad" className="font-body text-white/70 text-xs hover:text-white transition-colors">
-              Política de privacidad
-            </Link>
-            <Link href="/terminos" className="font-body text-white/70 text-xs hover:text-white transition-colors">
-              Términos y condiciones
-            </Link>
-          </div>
         </div>
 
       </div>
