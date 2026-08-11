@@ -50,14 +50,14 @@ export function Plans() {
                     {plan.name}
                   </h3>
                   <p
-                    className={`font-body text-sm ${
+                    className={`font-body text-sm font-bold ${
                       plan.highlighted ? 'text-white/70' : 'text-ink-soft'
                     }`}
                   >
                     {plan.tagline}
                   </p>
                   <p
-                    className={`font-body text-xs mt-2 font-semibold ${
+                    className={`font-body text-xs mt-2 font-bold ${
                       plan.highlighted ? 'text-white/55' : 'text-ink-soft'
                     }`}
                   >
