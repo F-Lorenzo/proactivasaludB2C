@@ -17,7 +17,7 @@ export function Plans() {
               Un plan para cada etapa
             </h2>
             <p className="font-body text-ink-mid text-lg max-w-[46ch] mx-auto">
-              Todos incluyen teleconsultas desde tu hogar. Los precios se informan en la consulta personalizada.
+              Todos incluyen teleconsultas desde tu hogar.
             </p>
           </div>
         </AnimateIn>
@@ -62,6 +62,22 @@ export function Plans() {
                     }`}
                   >
                     {plan.persona}
+                  </p>
+                  <p className="flex items-baseline gap-1.5 mt-5">
+                    <span
+                      className={`font-display text-3xl font-bold ${
+                        plan.highlighted ? 'text-white' : 'text-ink'
+                      }`}
+                    >
+                      {plan.price}
+                    </span>
+                    <span
+                      className={`font-body text-sm ${
+                        plan.highlighted ? 'text-white/60' : 'text-ink-soft'
+                      }`}
+                    >
+                      /mes
+                    </span>
                   </p>
                 </div>
 
