@@ -72,6 +72,7 @@ export const PLANS = [
     name: 'Care',
     tagline: 'Primeros pasos hacia el bienestar',
     persona: 'Para quienes dan el primer paso',
+    price: 'USD 29,80',
     highlighted: false,
     features: [
       '1 consulta de Nutrición por mes',
@@ -86,6 +87,7 @@ export const PLANS = [
     name: 'Plus',
     tagline: 'Seguimiento completo e integral',
     persona: 'Ideal para un cambio real',
+    price: 'USD 59,90',
     highlighted: true,
     badge: 'Más elegido',
     features: [
@@ -102,6 +104,7 @@ export const PLANS = [
     name: 'Prime',
     tagline: 'Acompañamiento total y personalizado',
     persona: 'Para quienes quieren lo máximo',
+    price: 'USD 89,50',
     highlighted: false,
     features: [
       '2 consultas de Nutrición por mes',
