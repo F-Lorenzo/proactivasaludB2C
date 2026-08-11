@@ -78,6 +78,7 @@ export const PLANS = [
       'Plan de Actividad Física mensual',
       'Charlas Virtuales de Bienestar',
       'Acompañamiento de agente digital',
+      'Centro de bienestar Proactiva',
     ],
   },
   {
@@ -89,10 +90,11 @@ export const PLANS = [
     badge: 'Más elegido',
     features: [
       '1 consulta de Nutrición por mes',
-      'Plan de Actividad Física + 1 seguimiento',
+      '1 plan de Actividad Deportiva + seguimiento',
       '1 sesión de Bienestar Emocional por mes',
       'Charlas Virtuales de Coaching',
       'Seguimiento continuo por teleconsulta',
+      'Centro de bienestar Proactiva',
     ],
   },
   {
@@ -105,9 +107,10 @@ export const PLANS = [
       '2 consultas de Nutrición por mes',
       'Plan de Actividad Física + seguimientos frecuentes',
       'Sesiones de Bienestar Emocional ampliadas',
-      'Coaching ontológico personalizado',
+      'Coaching ontológico',
       'Prioridad en agenda y soporte extendido',
       'Informes de progreso mensuales',
+      'Centro de bienestar Proactiva',
     ],
   },
 ]
