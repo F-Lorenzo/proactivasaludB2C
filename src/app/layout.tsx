@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Rufina, Nunito } from 'next/font/google'
+import { WhatsAppButton } from '@/components/WhatsAppButton'
 import './globals.css'
 
 const rufina = Rufina({
@@ -48,6 +49,7 @@ export default function RootLayout({
           Saltar al contenido
         </a>
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   )
