@@ -89,7 +89,7 @@ export const PLANS = [
     badge: 'Más elegido',
     features: [
       '1 consulta de Nutrición por mes',
-      'Plan de Actividad Física + 1 seguimiento',
+      '1 plan de Actividad Deportiva + seguimiento',
       '1 sesión de Bienestar Emocional por mes',
       'Charlas Virtuales de Coaching',
       'Seguimiento continuo por teleconsulta',
