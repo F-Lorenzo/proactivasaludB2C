@@ -12,6 +12,8 @@ const LABEL_BASE =
 
 export function CTASection() {
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(false)
   const [nombre, setNombre] = useState('')
   const [form, setForm] = useState({
     apellido: '',
@@ -21,9 +23,40 @@ export function CTASection() {
     plan: '',
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSubmitting(true)
+    setError(false)
+
+    const planLabel = PLANS.find((p) => p.id === form.plan)?.name ?? 'No especificado'
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          subject: 'Nueva inscripción — Proactiva Salud',
+          from_name: 'Proactiva Salud — Web',
+          nombre,
+          apellido: form.apellido,
+          email: form.email,
+          telefono: form.telefono,
+          ciudad: form.ciudad,
+          plan: planLabel,
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -183,11 +216,18 @@ export function CTASection() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="mt-1 w-full flex items-center justify-center gap-2.5 bg-brand text-white font-body font-semibold text-base py-4 rounded-full hover:bg-brand-dark transition-colors shadow-button"
+                  disabled={submitting}
+                  className="mt-1 w-full flex items-center justify-center gap-2.5 bg-brand text-white font-body font-semibold text-base py-4 rounded-full hover:bg-brand-dark transition-colors shadow-button disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <Send size={18} aria-hidden="true" />
-                  Unirme al programa de bienestar integral
+                  {submitting ? 'Enviando...' : 'Unirme al programa de bienestar integral'}
                 </button>
+
+                {error && (
+                  <p className="font-body text-xs text-red-600 text-center">
+                    No pudimos enviar tus datos. Probá de nuevo en unos segundos.
+                  </p>
+                )}
 
                 <p className="font-body text-xs text-ink-soft text-center">
                   Al enviar aceptás que Proactiva Salud te contacte con información del programa.
