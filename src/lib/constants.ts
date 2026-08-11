@@ -78,6 +78,7 @@ export const PLANS = [
       'Plan de Actividad Física mensual',
       'Charlas Virtuales de Bienestar',
       'Acompañamiento de agente digital',
+      'Centro de bienestar Proactiva',
     ],
   },
   {
@@ -93,6 +94,7 @@ export const PLANS = [
       '1 sesión de Bienestar Emocional por mes',
       'Charlas Virtuales de Coaching',
       'Seguimiento continuo por teleconsulta',
+      'Centro de bienestar Proactiva',
     ],
   },
   {
@@ -108,6 +110,7 @@ export const PLANS = [
       'Coaching ontológico',
       'Prioridad en agenda y soporte extendido',
       'Informes de progreso mensuales',
+      'Centro de bienestar Proactiva',
     ],
   },
 ]
