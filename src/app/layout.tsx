@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Rufina, Nunito } from 'next/font/google'
 import { WhatsAppButton } from '@/components/WhatsAppButton'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 import './globals.css'
 
 const rufina = Rufina({
@@ -42,14 +43,16 @@ export default function RootLayout({
       className={`${rufina.variable} ${nunito.variable} h-full`}
     >
       <body className="min-h-full flex flex-col antialiased">
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-white focus:rounded-lg"
-        >
-          Saltar al contenido
-        </a>
-        {children}
-        <WhatsAppButton />
+        <LanguageProvider>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-white focus:rounded-lg"
+          >
+            Saltar al contenido
+          </a>
+          {children}
+          <WhatsAppButton />
+        </LanguageProvider>
       </body>
     </html>
   )
