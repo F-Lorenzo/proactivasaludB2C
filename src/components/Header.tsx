@@ -47,33 +47,33 @@ export function Header() {
         </Link>
 
         {/* Nav */}
-        <nav className="hidden md:flex items-center gap-8" aria-label="Navegación principal">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6" aria-label="Navegación principal">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="font-body font-black text-[16px] text-ink-mid hover:text-brand transition-colors"
+              className="font-body font-black text-[13px] xl:text-[14px] whitespace-nowrap text-ink-mid hover:text-brand transition-colors"
             >
               {link.label}
             </Link>
           ))}
-          <Link href="/#comunidad">
+          <Link href="/#comunidad" className="flex-shrink-0">
             <Image
               src="/proactiva-club.png"
               alt={t.nav.club}
               width={112}
               height={112}
-              className="h-28 w-28 object-contain rounded-full"
+              className="h-16 w-16 xl:h-20 xl:w-20 object-contain rounded-full"
             />
           </Link>
         </nav>
 
         {/* CTA + language switcher */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-2.5 xl:gap-3 flex-shrink-0">
           <LanguageSwitcher />
           <Link
             href="/#inscripcion"
-            className="inline-flex bg-brand text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-hover"
+            className="inline-flex whitespace-nowrap bg-brand text-white font-body font-semibold text-[13px] xl:text-sm px-4 py-2.5 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-hover"
           >
             {t.nav.cta}
           </Link>
@@ -83,7 +83,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setMobileOpen((v) => !v)}
-          className="md:hidden text-ink p-2 -mr-2"
+          className="lg:hidden text-ink p-2 -mr-2"
           aria-label={mobileOpen ? t.nav.closeMenu : t.nav.openMenu}
           aria-expanded={mobileOpen}
         >
@@ -94,7 +94,7 @@ export function Header() {
       {/* Mobile menu */}
       {mobileOpen && (
         <nav
-          className="md:hidden bg-white shadow-card border-t border-brand-muted/40 px-6 py-4 flex flex-col gap-1"
+          className="lg:hidden bg-white shadow-card border-t border-brand-muted/40 px-6 py-4 flex flex-col gap-1"
           aria-label="Navegación móvil"
         >
           {navLinks.map((link) => (
