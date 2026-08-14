@@ -1,29 +1,11 @@
+'use client'
+
 import Image from 'next/image'
 import { Users, Heart, MessageCircle, Zap } from 'lucide-react'
 import { AnimateIn } from './ui/AnimateIn'
+import { useLanguage } from '@/contexts/LanguageContext'
 
-const COMMUNITY_FEATURES = [
-  {
-    icon: Users,
-    title: 'Red de pares',
-    description: 'Conectate con personas que están en la misma etapa. Compartir el camino hace toda la diferencia.',
-  },
-  {
-    icon: Heart,
-    title: 'Contención real',
-    description: 'Un espacio donde tu bienestar emocional importa tanto como tu salud física.',
-  },
-  {
-    icon: MessageCircle,
-    title: 'Charlas y encuentros',
-    description: 'Actividades grupales virtuales, charlas con especialistas y espacios de intercambio.',
-  },
-  {
-    icon: Zap,
-    title: 'Motivación constante',
-    description: 'El grupo te impulsa. La comunidad sostiene el cambio cuando la motivación individual flaquea.',
-  },
-]
+const FEATURE_ICONS = [Users, Heart, MessageCircle, Zap]
 
 const GALLERY = [
   {
@@ -59,6 +41,9 @@ const GALLERY = [
 ]
 
 export function Testimonials() {
+  const { t } = useLanguage()
+  const features = t.testimonials.features.map((f, i) => ({ ...f, icon: FEATURE_ICONS[i] }))
+
   return (
     <section id="comunidad" className="py-20 lg:py-28 bg-surface">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -67,13 +52,13 @@ export function Testimonials() {
         <AnimateIn>
           <div className="max-w-2xl mb-16">
             <p className="font-body text-brand text-xs tracking-widest uppercase font-semibold mb-4">
-              Comunidad Proactiva · Club +50
+              {t.testimonials.eyebrow}
             </p>
             <h2 className="font-display text-4xl lg:text-5xl text-ink leading-tight mb-4">
-              No estás solo en<br />este camino
+              {t.testimonials.titleLine1}<br />{t.testimonials.titleLine2}
             </h2>
             <p className="font-body text-ink-mid text-lg leading-relaxed max-w-[44ch]">
-              El Club +50 es el espacio de encuentro de todas las personas que eligen vivir esta etapa con más energía, propósito y conexión.
+              {t.testimonials.description}
             </p>
           </div>
         </AnimateIn>
@@ -126,7 +111,7 @@ export function Testimonials() {
             <AnimateIn delay={160}>
               <div className="bg-white rounded-3xl p-6">
                 <p className="font-body text-xs text-ink-soft uppercase tracking-widest font-semibold mb-5">
-                  Miembros del club
+                  {t.testimonials.membersLabel}
                 </p>
                 <div className="flex items-center gap-3 flex-wrap">
                   {GALLERY.map((person) => (
@@ -150,7 +135,9 @@ export function Testimonials() {
                     <div className="w-14 h-14 rounded-full bg-brand-light flex items-center justify-center border-2 border-dashed border-brand/40">
                       <span className="font-body text-brand font-bold text-lg leading-none">+50</span>
                     </div>
-                    <p className="font-body text-xs text-ink-soft text-center leading-tight">y<br />sumando</p>
+                    <p className="font-body text-xs text-ink-soft text-center leading-tight">
+                      {t.testimonials.andCountingLine1}<br />{t.testimonials.andCountingLine2}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -163,12 +150,12 @@ export function Testimonials() {
 
             <AnimateIn delay={80}>
               <p className="font-body text-ink-mid leading-relaxed text-lg max-w-[44ch]">
-                Ser parte del Club +50 significa tener un grupo humano que te acompaña, te entiende y comparte tus mismos objetivos de salud y bienestar.
+                {t.testimonials.intro}
               </p>
             </AnimateIn>
 
             <div className="grid sm:grid-cols-2 gap-4">
-              {COMMUNITY_FEATURES.map((feat, i) => {
+              {features.map((feat, i) => {
                 const Icon = feat.icon
                 return (
                   <AnimateIn key={feat.title} delay={100 + i * 70}>
@@ -194,16 +181,16 @@ export function Testimonials() {
                   <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
                     <Users size={20} className="text-white" aria-hidden="true" />
                   </div>
-                  <p className="font-body font-semibold text-white text-lg">Club +50</p>
+                  <p className="font-body font-semibold text-white text-lg">{t.testimonials.clubTitle}</p>
                 </div>
                 <p className="font-body text-white/65 text-sm leading-relaxed">
-                  Incluido en todos los planes de Proactiva Salud. Cuando te sumás al programa, te sumás a la comunidad.
+                  {t.testimonials.clubDescription}
                 </p>
                 <a
                   href="#inscripcion"
                   className="inline-flex items-center justify-center gap-2 bg-white text-brand font-body font-semibold text-sm py-3.5 rounded-full hover:bg-brand-light transition-colors"
                 >
-                  Quiero ser parte
+                  {t.testimonials.clubCta}
                 </a>
               </div>
             </AnimateIn>

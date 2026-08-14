@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from 'react'
 import { X } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
-const WHATSAPP_URL =
-  'https://wa.me/541176781555?text=' +
-  encodeURIComponent('¡Hola! Quiero hacer una consulta sobre Proactiva Salud.')
+const WHATSAPP_NUMBER = '541176781555'
 
 export function WhatsAppButton() {
+  const { t } = useLanguage()
   const [showBubble, setShowBubble] = useState(false)
   const [dismissed, setDismissed] = useState(false)
 
@@ -16,6 +16,9 @@ export function WhatsAppButton() {
     return () => clearTimeout(timer)
   }, [])
 
+  const whatsappUrl =
+    `https://wa.me/${WHATSAPP_NUMBER}?text=` + encodeURIComponent(t.whatsapp.prefilledMessage)
+
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-end gap-3">
       {showBubble && !dismissed && (
@@ -23,22 +26,22 @@ export function WhatsAppButton() {
           <button
             type="button"
             onClick={() => setDismissed(true)}
-            aria-label="Cerrar mensaje"
+            aria-label={t.whatsapp.closeAria}
             className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-ink-mid text-white flex items-center justify-center hover:bg-ink transition-colors"
           >
             <X size={12} aria-hidden="true" />
           </button>
           <p className="font-body text-sm text-ink-mid leading-snug">
-            ¿Tenés alguna consulta sobre Proactiva?
+            {t.whatsapp.bubbleMessage}
           </p>
         </div>
       )}
 
       <a
-        href={WHATSAPP_URL}
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Hablar por WhatsApp"
+        aria-label={t.whatsapp.openAria}
         className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] shadow-elevated hover:scale-105 transition-transform duration-200"
       >
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-75 animate-ping" aria-hidden="true" />

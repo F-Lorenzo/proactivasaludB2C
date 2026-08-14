@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Send, CircleCheck } from 'lucide-react'
 import { PLANS } from '@/lib/constants'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const INPUT_BASE =
   'w-full px-4 py-3 rounded-xl bg-surface border border-brand-muted/60 font-body text-ink placeholder:text-ink-soft/50 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors text-base'
@@ -11,6 +12,7 @@ const LABEL_BASE =
   'font-body text-xs font-semibold text-ink-mid uppercase tracking-wide'
 
 export function CTASection() {
+  const { t } = useLanguage()
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState(false)
@@ -28,7 +30,7 @@ export function CTASection() {
     setSubmitting(true)
     setError(false)
 
-    const planLabel = PLANS.find((p) => p.id === form.plan)?.name ?? 'No especificado'
+    const planLabel = PLANS.find((p) => p.id === form.plan)?.name ?? t.ctaSection.planNotSpecified
 
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
@@ -67,21 +69,17 @@ export function CTASection() {
           {/* ── Left: copy ────────────────────────────────────────────── */}
           <div className="flex flex-col gap-6 lg:pt-4">
             <p className="font-body text-brand-light/60 text-xs tracking-widest uppercase font-semibold">
-              Comunidad Proactiva · Club +50
+              {t.ctaSection.eyebrow}
             </p>
             <h2 className="font-display text-4xl lg:text-5xl text-white leading-tight">
-              Unite a la comunidad<br />+50 más saludable<br />del mundo
+              {t.ctaSection.titleLine1}<br />{t.ctaSection.titleLine2}<br />{t.ctaSection.titleLine3}
             </h2>
             <p className="font-body text-xl text-white/65 leading-relaxed max-w-[42ch]">
-              Dejanos tus datos y te contamos cómo ser parte de la comunidad Proactiva y el Club +50.
+              {t.ctaSection.description}
             </p>
 
             <ul className="flex flex-col gap-4 mt-2">
-              {[
-                'Una comunidad de personas que eligen vivir mejor',
-                'Acceso a profesionales, contenidos y actividades grupales',
-                'Te contactamos a la brevedad para darte la bienvenida',
-              ].map((item) => (
+              {t.ctaSection.bullets.map((item) => (
                 <li key={item} className="flex items-center gap-3">
                   <CircleCheck
                     size={18}
@@ -102,43 +100,43 @@ export function CTASection() {
                   <CircleCheck size={32} className="text-accent" aria-hidden="true" />
                 </div>
                 <h3 className="font-display text-2xl text-ink font-bold">
-                  ¡Gracias, {nombre}!
+                  {t.ctaSection.successTitle.replace('{name}', nombre)}
                 </h3>
                 <p className="font-body text-ink-mid max-w-xs leading-relaxed">
-                  Un asesor de Proactiva Salud se comunicará con vos pronto para darte la bienvenida a la comunidad +50 más saludable del mundo.
+                  {t.ctaSection.successMessage}
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
                 <h3 className="font-display text-2xl text-ink font-bold mb-1">
-                  Completá tus datos
+                  {t.ctaSection.formTitle}
                 </h3>
 
                 {/* Nombre + Apellido */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="nombre" className={LABEL_BASE}>Nombre</label>
+                    <label htmlFor="nombre" className={LABEL_BASE}>{t.ctaSection.labels.nombre}</label>
                     <input
                       id="nombre"
                       name="nombre"
                       type="text"
                       required
                       autoComplete="given-name"
-                      placeholder="Tu nombre"
+                      placeholder={t.ctaSection.placeholders.nombre}
                       value={nombre}
                       onChange={(e) => setNombre(e.target.value)}
                       className={INPUT_BASE}
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="apellido" className={LABEL_BASE}>Apellido</label>
+                    <label htmlFor="apellido" className={LABEL_BASE}>{t.ctaSection.labels.apellido}</label>
                     <input
                       id="apellido"
                       name="apellido"
                       type="text"
                       required
                       autoComplete="family-name"
-                      placeholder="Tu apellido"
+                      placeholder={t.ctaSection.placeholders.apellido}
                       value={form.apellido}
                       onChange={(e) => setForm((f) => ({ ...f, apellido: e.target.value }))}
                       className={INPUT_BASE}
@@ -148,14 +146,14 @@ export function CTASection() {
 
                 {/* Email */}
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="email" className={LABEL_BASE}>Email</label>
+                  <label htmlFor="email" className={LABEL_BASE}>{t.ctaSection.labels.email}</label>
                   <input
                     id="email"
                     name="email"
                     type="email"
                     required
                     autoComplete="email"
-                    placeholder="tu@email.com"
+                    placeholder={t.ctaSection.placeholders.email}
                     value={form.email}
                     onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
                     className={INPUT_BASE}
@@ -165,28 +163,28 @@ export function CTASection() {
                 {/* Teléfono + Ciudad */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="telefono" className={LABEL_BASE}>Teléfono</label>
+                    <label htmlFor="telefono" className={LABEL_BASE}>{t.ctaSection.labels.telefono}</label>
                     <input
                       id="telefono"
                       name="telefono"
                       type="tel"
                       required
                       autoComplete="tel"
-                      placeholder="+54 9 11..."
+                      placeholder={t.ctaSection.placeholders.telefono}
                       value={form.telefono}
                       onChange={(e) => setForm((f) => ({ ...f, telefono: e.target.value }))}
                       className={INPUT_BASE}
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="ciudad" className={LABEL_BASE}>Ciudad</label>
+                    <label htmlFor="ciudad" className={LABEL_BASE}>{t.ctaSection.labels.ciudad}</label>
                     <input
                       id="ciudad"
                       name="ciudad"
                       type="text"
                       required
                       autoComplete="address-level2"
-                      placeholder="Tu ciudad"
+                      placeholder={t.ctaSection.placeholders.ciudad}
                       value={form.ciudad}
                       onChange={(e) => setForm((f) => ({ ...f, ciudad: e.target.value }))}
                       className={INPUT_BASE}
@@ -196,7 +194,7 @@ export function CTASection() {
 
                 {/* Plan */}
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="plan" className={LABEL_BASE}>Plan de interés</label>
+                  <label htmlFor="plan" className={LABEL_BASE}>{t.ctaSection.labels.plan}</label>
                   <select
                     id="plan"
                     name="plan"
@@ -204,10 +202,10 @@ export function CTASection() {
                     onChange={(e) => setForm((f) => ({ ...f, plan: e.target.value }))}
                     className={`${INPUT_BASE} appearance-none cursor-pointer`}
                   >
-                    <option value="">No sé todavía — me orientarán</option>
+                    <option value="">{t.ctaSection.planDefaultOption}</option>
                     {PLANS.map((plan) => (
                       <option key={plan.id} value={plan.id}>
-                        Plan {plan.name}
+                        {t.ctaSection.planOptionPrefix} {plan.name}
                       </option>
                     ))}
                   </select>
@@ -220,17 +218,17 @@ export function CTASection() {
                   className="mt-1 w-full flex items-center justify-center gap-2.5 bg-brand text-white font-body font-semibold text-base py-4 rounded-full hover:bg-brand-dark transition-colors shadow-button disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <Send size={18} aria-hidden="true" />
-                  {submitting ? 'Enviando...' : 'Unirme al programa de bienestar integral'}
+                  {submitting ? t.ctaSection.sending : t.ctaSection.submit}
                 </button>
 
                 {error && (
                   <p className="font-body text-xs text-red-600 text-center">
-                    No pudimos enviar tus datos. Probá de nuevo en unos segundos.
+                    {t.ctaSection.errorMessage}
                   </p>
                 )}
 
                 <p className="font-body text-xs text-ink-soft text-center">
-                  Al enviar aceptás que Proactiva Salud te contacte con información del programa.
+                  {t.ctaSection.disclaimer}
                 </p>
               </form>
             )}

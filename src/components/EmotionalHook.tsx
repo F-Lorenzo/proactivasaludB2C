@@ -1,42 +1,30 @@
+'use client'
+
 import Image from 'next/image'
 import { AnimateIn } from './ui/AnimateIn'
+import { useLanguage } from '@/contexts/LanguageContext'
 
-const HOOKS = [
-  {
-    image: '/pareja-caminando-playa.png',
-    alt: 'Pareja mayor caminando juntos en la playa',
-    title: 'Seguir siendo vos mismo',
-    description:
-      'Independencia, energía y ganas de hacer planes. No querés que te cuiden — querés cuidarte bien.',
-  },
-  {
-    image: '/vieja-elongando.png',
-    alt: 'Mujer mayor elongando',
-    title: 'Disfrutar lo que importa',
-    description:
-      '¡Esta es tu etapa! Con más tiempo, más libertad y más ganas que nunca. Viajá, reíte, disfrutá cada momento con la energía y la vitalidad que merecés.',
-  },
-  {
-    image: '/vieja-saludable.png',
-    alt: 'Mujer mayor saludable y activa',
-    title: 'Prevenir, no esperar',
-    description:
-      'Los hábitos saludables aumentan la energía, la vitalidad y la calidad de vida. Invertir en salud hoy es ganar independencia para el futuro.',
-  },
+const HOOK_MEDIA = [
+  { image: '/pareja-caminando-playa.png', alt: 'Pareja mayor caminando juntos en la playa' },
+  { image: '/vieja-elongando.png', alt: 'Mujer mayor elongando' },
+  { image: '/vieja-saludable.png', alt: 'Mujer mayor saludable y activa' },
 ]
 
 export function EmotionalHook() {
+  const { t } = useLanguage()
+  const hooks = t.emotionalHook.items.map((item, i) => ({ ...item, ...HOOK_MEDIA[i] }))
+
   return (
     <section className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <AnimateIn>
           <p className="font-body text-center text-brand text-lg tracking-widest uppercase font-bold mb-14 transition-all duration-500 ease-out hover:tracking-wider hover:text-brand-dark">
-            ¿Por qué Proactiva Salud?
+            {t.emotionalHook.eyebrow}
           </p>
         </AnimateIn>
 
         <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
-          {HOOKS.map((hook, i) => (
+          {hooks.map((hook, i) => (
             <AnimateIn key={hook.title} delay={i * 120}>
               <div className="flex flex-col rounded-3xl overflow-hidden bg-surface hover:shadow-hover transition-shadow duration-300">
 
