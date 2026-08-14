@@ -12,7 +12,7 @@ export function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage()
 
   return (
-    <div className="flex items-center gap-1.5" role="group" aria-label="Seleccionar idioma">
+    <div className="flex items-center gap-1 flex-shrink-0" role="group" aria-label="Seleccionar idioma">
       {FLAGS.map((flag) => {
         const active = language === flag.lang
         return (
@@ -23,9 +23,9 @@ export function LanguageSwitcher() {
             aria-pressed={active}
             aria-label={flag.label}
             title={flag.label}
-            className={`w-8 h-8 rounded-full overflow-hidden transition-all duration-200 ${
+            className={`w-6 h-6 rounded-full overflow-hidden transition-all duration-200 flex-shrink-0 ${
               active
-                ? 'ring-2 ring-brand ring-offset-2 scale-105'
+                ? 'ring-2 ring-brand ring-offset-1 scale-105'
                 : 'opacity-60 hover:opacity-100'
             }`}
           >
