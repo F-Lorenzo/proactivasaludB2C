@@ -1,8 +1,21 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export function Footer() {
+  const { t } = useLanguage()
   const year = new Date().getFullYear()
+
+  const navLinks = [
+    { label: t.nav.home, href: '/' },
+    { label: t.nav.program, href: '/#pilares' },
+    { label: t.nav.plans, href: '/#planes' },
+    { label: t.nav.club, href: '/#comunidad' },
+    { label: t.nav.about, href: '/quienes-somos' },
+    { label: t.footer.navUnirme, href: '/#inscripcion' },
+  ]
 
   return (
     <footer className="bg-brand-dark py-12">
@@ -22,24 +35,17 @@ export function Footer() {
               />
             </div>
             <p className="font-body text-white text-sm max-w-xs leading-relaxed">
-              La comunidad +50 más saludable del mundo. Bienestar integral para mayores de 50.
+              {t.footer.tagline}
             </p>
           </div>
 
           {/* Nav */}
           <div>
             <p className="font-body text-white/70 text-xs uppercase tracking-widest mb-4">
-              Programa
+              {t.footer.programHeading}
             </p>
             <ul className="flex flex-col gap-2.5">
-              {[
-                { label: 'Inicio', href: '/' },
-                { label: 'El programa', href: '/#pilares' },
-                { label: 'Planes', href: '/#planes' },
-                { label: 'Club +50', href: '/#comunidad' },
-                { label: 'Quiénes somos', href: '/quienes-somos' },
-                { label: 'Unirme', href: '/#inscripcion' },
-              ].map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -55,10 +61,10 @@ export function Footer() {
           {/* Contact */}
           <div>
             <p className="font-body text-white/70 text-xs uppercase tracking-widest mb-4">
-              Contacto
+              {t.footer.contactHeading}
             </p>
             <p className="font-body text-white text-sm leading-relaxed max-w-[18ch]">
-              Completá el formulario y te contactamos a la brevedad.
+              {t.footer.contactText}
             </p>
             <a
               href="mailto:info@proactivasalud.com"
@@ -76,7 +82,7 @@ export function Footer() {
               href="#inscripcion"
               className="inline-block mt-3 font-body text-white text-sm font-semibold hover:text-white/70 transition-colors"
             >
-              Ir al formulario →
+              {t.footer.formLink}
             </a>
           </div>
         </div>
@@ -84,7 +90,7 @@ export function Footer() {
         {/* Divider + legal */}
         <div className="pt-8 border-t border-white/20 flex justify-center sm:justify-start">
           <p className="font-body text-white/70 text-xs">
-            © {year} Proactiva Salud. Todos los derechos reservados.
+            {t.footer.copyright.replace('{year}', String(year))}
           </p>
         </div>
 

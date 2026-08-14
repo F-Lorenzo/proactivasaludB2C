@@ -1,7 +1,12 @@
+'use client'
+
 import Image from 'next/image'
 import { ChevronDown } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export function Hero() {
+  const { t } = useLanguage()
+
   return (
     <section className="relative flex flex-col overflow-hidden bg-brand-dark pt-16 lg:pt-24">
       <div className="relative flex-1 w-full">
@@ -14,22 +19,22 @@ export function Hero() {
             <div className="flex items-center gap-3">
               <div className="h-px w-10 bg-brand-muted" aria-hidden="true" />
               <span className="font-body font-semibold text-sm tracking-widest uppercase text-brand-muted">
-                Proactiva Salud
+                {t.hero.eyebrow}
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="font-display text-5xl lg:text-[3.75rem] xl:text-6xl text-white leading-[1.04] tracking-tight">
-              Tu mejor etapa
+              {t.hero.headlineLine1}
               <br />
-              <span className="text-brand-muted">no terminó.</span>
+              <span className="text-brand-muted">{t.hero.headlineHighlight}</span>
               <br />
-              Acaba de empezar.
+              {t.hero.headlineLine3}
             </h1>
 
             {/* Subheadline */}
             <p className="font-body text-xl text-white/65 max-w-[44ch] leading-relaxed">
-              Programa de bienestar integral para mayores de 50. Nutrición, movimiento, salud emocional y acompañamiento profesional — todo desde tu hogar.
+              {t.hero.subheadline}
             </p>
 
             {/* CTAs */}
@@ -38,13 +43,13 @@ export function Hero() {
                 href="#inscripcion"
                 className="inline-flex items-center justify-center bg-brand text-white font-body font-semibold text-base px-8 py-4 rounded-full hover:bg-brand-light hover:text-brand-dark transition-all duration-200 shadow-button hover:shadow-elevated"
               >
-                Unirme al programa de bienestar integral
+                {t.hero.ctaPrimary}
               </a>
               <a
                 href="#pilares"
                 className="inline-flex items-center justify-center font-body font-semibold text-base text-white px-8 py-4 rounded-full border-2 border-white/25 hover:border-white/60 hover:bg-white/10 transition-all duration-200"
               >
-                Ver el programa
+                {t.hero.ctaSecondary}
               </a>
             </div>
           </div>
@@ -53,7 +58,7 @@ export function Hero() {
           <div className="relative hidden lg:block">
             <Image
               src="/active-senior-couple-outdoor-hike-countryside-together.jpg"
-              alt="Pareja mayor caminando al aire libre"
+              alt=""
               fill
               className="object-cover"
               priority
@@ -73,8 +78,7 @@ export function Hero() {
         <div className="max-w-7xl mx-auto">
           <div className="bg-accent rounded-2xl px-6 py-5 lg:px-8">
             <p className="font-body text-sm lg:text-base text-white text-center leading-relaxed">
-              <span className="font-bold">Hablá con un profesional hoy, desde tu casa.</span>{' '}
-              Sin turnos, sin esperas, con seguimiento real.
+              <span className="font-bold">{t.hero.bannerBold}</span> {t.hero.bannerRest}
             </p>
           </div>
         </div>

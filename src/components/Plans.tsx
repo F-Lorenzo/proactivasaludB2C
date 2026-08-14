@@ -1,8 +1,14 @@
+'use client'
+
 import { Check } from 'lucide-react'
 import { PLANS } from '@/lib/constants'
 import { AnimateIn } from './ui/AnimateIn'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export function Plans() {
+  const { t } = useLanguage()
+  const plans = PLANS.map((plan) => ({ ...plan, ...t.plans.items[plan.id] }))
+
   return (
     <section id="planes" className="py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -11,20 +17,20 @@ export function Plans() {
         <AnimateIn>
           <div className="text-center max-w-2xl mx-auto mb-16">
             <p className="font-body text-brand text-xs tracking-widest uppercase font-semibold mb-4">
-              Elegí tu plan
+              {t.plans.eyebrow}
             </p>
             <h2 className="font-display text-4xl lg:text-5xl text-ink leading-tight mb-4">
-              Un plan para cada etapa
+              {t.plans.title}
             </h2>
             <p className="font-body text-ink-mid text-lg max-w-[46ch] mx-auto">
-              Todos incluyen teleconsultas desde tu hogar.
+              {t.plans.description}
             </p>
           </div>
         </AnimateIn>
 
         {/* Cards */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
-          {PLANS.map((plan, i) => (
+          {plans.map((plan, i) => (
             <AnimateIn key={plan.id} delay={i * 100} className="h-full">
               <div
                 className={`relative rounded-3xl p-8 flex flex-col h-full transition-all duration-200 ${
@@ -34,7 +40,7 @@ export function Plans() {
                 }`}
               >
                 {/* Badge */}
-                {plan.badge && (
+                {'badge' in plan && plan.badge && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold font-body px-4 py-1.5 rounded-full whitespace-nowrap">
                     {plan.badge}
                   </div>
@@ -76,7 +82,7 @@ export function Plans() {
                         plan.highlighted ? 'text-white/60' : 'text-ink-soft'
                       }`}
                     >
-                      /mes
+                      {t.plans.perMonth}
                     </span>
                   </p>
                 </div>
@@ -112,7 +118,7 @@ export function Plans() {
                       : 'bg-brand text-white hover:bg-brand-dark shadow-button'
                   }`}
                 >
-                  Solicitar mi lugar
+                  {t.plans.cta}
                 </a>
               </div>
             </AnimateIn>
@@ -122,9 +128,9 @@ export function Plans() {
         {/* Footnote */}
         <AnimateIn delay={300}>
           <p className="text-center font-body text-ink-soft text-sm mt-10">
-            ¿Tenés dudas sobre cuál elegir?{' '}
+            {t.plans.footnoteQuestion}{' '}
             <a href="#inscripcion" className="text-brand font-semibold hover:underline">
-              Un asesor te orienta sin compromiso
+              {t.plans.footnoteLink}
             </a>
           </p>
         </AnimateIn>

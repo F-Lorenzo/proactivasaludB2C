@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { AnimateIn } from './ui/AnimateIn'
 import { TrendingUp } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 // SVG path for a smooth upward trend line (weeks 0–12, normalized to 200×80 viewBox)
 const TREND_POINTS = [
@@ -23,6 +24,7 @@ function buildArea(pts: number[][], h: number) {
 }
 
 export function HealthStats() {
+  const { t } = useLanguage()
   const ref = useRef<HTMLDivElement>(null)
   const [inView, setInView] = useState(false)
 
@@ -41,7 +43,7 @@ export function HealthStats() {
 
   const linePath = buildPath(TREND_POINTS)
   const areaPath = buildArea(TREND_POINTS, 80)
-  const WEEKS = ['Sem 0', 'Sem 3', 'Sem 6', 'Sem 9', 'Sem 12']
+  const weeks = t.healthStats.weeks
 
   return (
     <section className="py-20 lg:py-28 bg-surface overflow-hidden">
@@ -51,13 +53,13 @@ export function HealthStats() {
         <AnimateIn>
           <div className="max-w-2xl mb-16">
             <p className="font-body text-brand text-xs tracking-widest uppercase font-semibold mb-4">
-              Resultados comprobados
+              {t.healthStats.eyebrow}
             </p>
             <h2 className="font-display text-4xl lg:text-5xl text-ink leading-tight mb-4">
-              Lo que logran quienes<br />cuidan su salud
+              {t.healthStats.titleLine1}<br />{t.healthStats.titleLine2}
             </h2>
             <p className="font-body text-ink-mid text-lg max-w-[44ch] leading-relaxed">
-              Programas de bienestar integral para adultos mayores de 50 muestran resultados consistentes en pocas semanas de seguimiento profesional.
+              {t.healthStats.description}
             </p>
           </div>
         </AnimateIn>
@@ -72,7 +74,7 @@ export function HealthStats() {
               <div className="relative w-full aspect-[1491/1055] rounded-3xl overflow-hidden bg-white">
                 <Image
                   src="/grafico.png"
-                  alt="Gráfico de resultados: energía diaria +73%, calidad de sueño +62%, dolor articular -54%, marcadores de estrés -58%"
+                  alt={t.healthStats.chartAlt}
                   fill
                   className="object-contain"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -86,14 +88,14 @@ export function HealthStats() {
                 <div className="flex items-center gap-2 mb-4">
                   <TrendingUp size={16} className="text-brand" aria-hidden="true" />
                   <p className="font-body text-xs font-semibold text-ink-mid uppercase tracking-widest">
-                    Evolución de calidad de vida · primeras 12 semanas
+                    {t.healthStats.trendLabel}
                   </p>
                 </div>
                 <svg
                   viewBox="0 0 200 90"
                   className="w-full"
                   role="img"
-                  aria-label="Gráfico de evolución de calidad de vida en 12 semanas, mostrando tendencia ascendente"
+                  aria-label={t.healthStats.trendAriaLabel}
                   preserveAspectRatio="none"
                 >
                   {/* Grid lines */}
@@ -120,14 +122,14 @@ export function HealthStats() {
                   ))}
 
                   {/* X-axis labels */}
-                  {WEEKS.map((label, i) => (
+                  {weeks.map((label, i) => (
                     <text
                       key={label}
-                      x={i === 0 ? 2 : i === WEEKS.length - 1 ? 198 : (i / (WEEKS.length - 1)) * 200}
+                      x={i === 0 ? 2 : i === weeks.length - 1 ? 198 : (i / (weeks.length - 1)) * 200}
                       y="88"
                       fontSize="5"
                       fill="#94A3B8"
-                      textAnchor={i === 0 ? 'start' : i === WEEKS.length - 1 ? 'end' : 'middle'}
+                      textAnchor={i === 0 ? 'start' : i === weeks.length - 1 ? 'end' : 'middle'}
                       fontFamily="sans-serif"
                     >
                       {label}
@@ -139,7 +141,7 @@ export function HealthStats() {
 
             <AnimateIn delay={400}>
               <p className="font-body text-xs text-ink-soft">
-                * Datos basados en estudios de programas de bienestar integral para adultos mayores de 50 años.
+                {t.healthStats.footnote}
               </p>
             </AnimateIn>
           </div>
@@ -159,8 +161,8 @@ export function HealthStats() {
                 />
                 {/* Overlay stat */}
                 <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-2xl px-5 py-3 shadow-hover">
-                  <p className="font-display text-3xl font-bold text-brand leading-none">+50</p>
-                  <p className="font-body text-xs text-ink-mid mt-0.5">años, mejor calidad de vida</p>
+                  <p className="font-display text-3xl font-bold text-brand leading-none">{t.healthStats.runnerBadgeNumber}</p>
+                  <p className="font-body text-xs text-ink-mid mt-0.5">{t.healthStats.runnerBadgeText}</p>
                 </div>
               </div>
 
@@ -176,7 +178,7 @@ export function HealthStats() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent" />
                   <p className="absolute bottom-3 left-3 font-body text-xs font-semibold text-white leading-tight">
-                    Nutrición<br />consciente
+                    {t.healthStats.nutritionCaptionLine1}<br />{t.healthStats.nutritionCaptionLine2}
                   </p>
                 </div>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
@@ -189,7 +191,7 @@ export function HealthStats() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/40 to-transparent" />
                   <p className="absolute bottom-3 left-3 font-body text-xs font-semibold text-white leading-tight">
-                    Atención<br />profesional
+                    {t.healthStats.attentionCaptionLine1}<br />{t.healthStats.attentionCaptionLine2}
                   </p>
                 </div>
               </div>
@@ -206,10 +208,10 @@ export function HealthStats() {
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/40 to-transparent" />
                 <div className="absolute left-5 top-1/2 -translate-y-1/2">
                   <p className="font-body text-xs font-semibold text-white/80 uppercase tracking-widest mb-1">
-                    Comunidad
+                    {t.healthStats.communityLabel}
                   </p>
                   <p className="font-display text-2xl text-white font-bold leading-tight max-w-[16ch]">
-                    Rodeate de personas en tu misma etapa
+                    {t.healthStats.communityHeadline}
                   </p>
                 </div>
               </div>

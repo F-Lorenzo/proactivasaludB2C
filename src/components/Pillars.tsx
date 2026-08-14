@@ -1,7 +1,10 @@
+'use client'
+
 import Image from 'next/image'
 import { Utensils, Activity, Heart, Monitor, Users, CircleCheck } from 'lucide-react'
 import { PILLARS } from '@/lib/constants'
 import { AnimateIn } from './ui/AnimateIn'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const iconMap = { Utensils, Activity, Heart, Monitor, Users }
 
@@ -30,8 +33,10 @@ const PILLAR_IMAGES: Record<string, { src: string; alt: string }> = {
 }
 
 export function Pillars() {
-  const [featured, ...rest] = PILLARS
-  const FeaturedIcon = iconMap[featured.icon as keyof typeof iconMap]
+  const { t } = useLanguage()
+  const pillars = PILLARS.map((p) => ({ ...p, ...t.pillars.items[p.number] }))
+  const [featured, ...rest] = pillars
+  const FeaturedIcon = iconMap[PILLARS[0].icon as keyof typeof iconMap]
   const featuredImg = PILLAR_IMAGES[featured.number]
 
   return (
@@ -42,10 +47,10 @@ export function Pillars() {
         <AnimateIn>
           <div className="max-w-2xl mb-16">
             <p className="font-body text-brand text-xs tracking-widest uppercase font-semibold mb-4">
-              Los 5 pilares del programa
+              {t.pillars.eyebrow}
             </p>
             <h2 className="font-display text-4xl lg:text-5xl text-ink leading-tight">
-              Un programa completo,<br />diseñado para vos
+              {t.pillars.titleLine1}<br />{t.pillars.titleLine2}
             </h2>
           </div>
         </AnimateIn>
@@ -81,7 +86,7 @@ export function Pillars() {
 
                   <div>
                     <p className="font-body text-xs text-ink-soft uppercase tracking-widest font-semibold mb-4">
-                      Beneficios
+                      {t.pillars.benefitsLabel}
                     </p>
                     <ul className="space-y-3">
                       {featured.benefits.map((benefit) => (
@@ -117,7 +122,7 @@ export function Pillars() {
         {/* Remaining 4 pillars — 2×2 grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {rest.map((pillar, i) => {
-            const Icon = iconMap[pillar.icon as keyof typeof iconMap]
+            const Icon = iconMap[PILLARS[i + 1].icon as keyof typeof iconMap]
             const img = PILLAR_IMAGES[pillar.number]
             return (
               <AnimateIn key={pillar.number} delay={i * 80}>

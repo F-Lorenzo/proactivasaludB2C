@@ -4,17 +4,11 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
-
-const NAV_LINKS = [
-  { label: 'Inicio', href: '/' },
-  { label: 'El programa', href: '/#pilares' },
-  { label: 'Planes', href: '/#planes' },
-  { label: 'Club +50', href: '/#comunidad' },
-  { label: 'Quiénes somos', href: '/quienes-somos' },
-  { label: 'Página Central', href: 'https://proactivasalud.com' },
-]
+import { useLanguage } from '@/contexts/LanguageContext'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function Header() {
+  const { t } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -23,6 +17,15 @@ export function Header() {
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  const navLinks = [
+    { label: t.nav.home, href: '/' },
+    { label: t.nav.program, href: '/#pilares' },
+    { label: t.nav.plans, href: '/#planes' },
+    { label: t.nav.club, href: '/#comunidad' },
+    { label: t.nav.about, href: '/quienes-somos' },
+    { label: t.nav.mainSite, href: 'https://proactivasalud.com' },
+  ]
 
   return (
     <header
@@ -45,7 +48,7 @@ export function Header() {
 
         {/* Nav */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Navegación principal">
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -57,7 +60,7 @@ export function Header() {
           <Link href="/#comunidad">
             <Image
               src="/proactiva-club.png"
-              alt="Club +50"
+              alt={t.nav.club}
               width={112}
               height={112}
               className="h-28 w-28 object-contain rounded-full"
@@ -65,20 +68,23 @@ export function Header() {
           </Link>
         </nav>
 
-        {/* CTA */}
-        <Link
-          href="/#inscripcion"
-          className="hidden md:inline-flex bg-brand text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-hover"
-        >
-          Sumate ahora
-        </Link>
+        {/* CTA + language switcher */}
+        <div className="hidden md:flex items-center gap-4">
+          <LanguageSwitcher />
+          <Link
+            href="/#inscripcion"
+            className="inline-flex bg-brand text-white font-body font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-brand-dark transition-all duration-200 shadow-button hover:shadow-hover"
+          >
+            {t.nav.cta}
+          </Link>
+        </div>
 
         {/* Mobile menu toggle */}
         <button
           type="button"
           onClick={() => setMobileOpen((v) => !v)}
           className="md:hidden text-ink p-2 -mr-2"
-          aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-label={mobileOpen ? t.nav.closeMenu : t.nav.openMenu}
           aria-expanded={mobileOpen}
         >
           {mobileOpen ? <X size={26} /> : <Menu size={26} />}
@@ -91,7 +97,7 @@ export function Header() {
           className="md:hidden bg-white shadow-card border-t border-brand-muted/40 px-6 py-4 flex flex-col gap-1"
           aria-label="Navegación móvil"
         >
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -101,12 +107,15 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <div className="py-2.5">
+            <LanguageSwitcher />
+          </div>
           <Link
             href="/#inscripcion"
             onClick={() => setMobileOpen(false)}
             className="mt-2 bg-brand text-white font-body font-semibold text-sm px-5 py-3 rounded-full text-center hover:bg-brand-dark transition-colors shadow-button"
           >
-            Sumate ahora
+            {t.nav.cta}
           </Link>
         </nav>
       )}

@@ -1,8 +1,9 @@
 'use client'
 
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useSyncExternalStore } from 'react'
+import { translations, type Language, type Translations } from '@/translations'
 
-export type Language = 'es' | 'en' | 'pt'
+export type { Language }
 
 const COOKIE_NAME = 'ps_lang'
 const STORAGE_KEY = 'ps_lang'
@@ -39,31 +40,55 @@ function writeLocalStorage(value: Language) {
   window.localStorage.setItem(STORAGE_KEY, value)
 }
 
+// Tiny external store: language is process-wide (not per-component state),
+// synced to the cookie/localStorage, and read via useSyncExternalStore so
+// there's no "setState inside an effect" render cascade and no SSR/client
+// hydration mismatch (server always sees DEFAULT_LANGUAGE).
+let cachedLanguage: Language | null = null
+let listeners: Array<() => void> = []
+
+function getSnapshot(): Language {
+  if (cachedLanguage === null) {
+    cachedLanguage = readCookie() ?? readLocalStorage() ?? DEFAULT_LANGUAGE
+  }
+  return cachedLanguage
+}
+
+function getServerSnapshot(): Language {
+  return DEFAULT_LANGUAGE
+}
+
+function subscribe(listener: () => void) {
+  listeners.push(listener)
+  return () => {
+    listeners = listeners.filter((l) => l !== listener)
+  }
+}
+
+function setLanguage(next: Language) {
+  cachedLanguage = next
+  writeLocalStorage(next)
+  writeCookie(next)
+  listeners.forEach((listener) => listener())
+}
+
 interface LanguageContextValue {
   language: Language
   setLanguage: (language: Language) => void
+  t: Translations
 }
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE)
+  const language = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
 
   useEffect(() => {
-    const detected = readCookie() ?? readLocalStorage() ?? DEFAULT_LANGUAGE
-    setLanguageState(detected)
-    document.documentElement.lang = detected
-  }, [])
-
-  const setLanguage = (next: Language) => {
-    setLanguageState(next)
-    writeLocalStorage(next)
-    writeCookie(next)
-    document.documentElement.lang = next
-  }
+    document.documentElement.lang = language
+  }, [language])
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t: translations[language] }}>
       {children}
     </LanguageContext.Provider>
   )
