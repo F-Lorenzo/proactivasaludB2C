@@ -104,8 +104,8 @@ export function Plans() {
                   </p>
                   {ventaOficial && (
                     <p
-                      className={`font-body text-xs mt-1 ${
-                        plan.highlighted ? 'text-white/55' : 'text-ink-soft'
+                      className={`font-body text-sm font-bold mt-1 ${
+                        plan.highlighted ? 'text-white' : 'text-ink'
                       }`}
                     >
                       {t.plans.arsReference.replace(
