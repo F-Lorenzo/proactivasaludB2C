@@ -261,6 +261,8 @@ const en: Translations = {
     sending: 'Sending...',
     errorMessage: "We couldn't send your details. Please try again in a few seconds.",
     planNotSpecified: 'Not specified',
+    nameValidationHint: 'Letters only, between 1 and 32 characters.',
+    phoneValidationHint: 'Phone numbers only, with or without country code (e.g. +1 555 123 4567).',
     disclaimer: 'By submitting, you agree that Proactiva Salud may contact you with program information.',
     successTitle: 'Thank you, {name}!',
     successMessage:
