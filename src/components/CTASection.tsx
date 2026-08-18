@@ -107,7 +107,7 @@ export function CTASection() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <h3 className="font-display text-2xl text-ink font-bold mb-1">
                   {t.ctaSection.formTitle}
                 </h3>
@@ -121,6 +121,10 @@ export function CTASection() {
                       name="nombre"
                       type="text"
                       required
+                      minLength={1}
+                      maxLength={32}
+                      pattern="[A-Za-zÀ-ÖØ-öø-ÿ' \-]{1,32}"
+                      title={t.ctaSection.nameValidationHint}
                       autoComplete="given-name"
                       placeholder={t.ctaSection.placeholders.nombre}
                       value={nombre}
@@ -135,6 +139,10 @@ export function CTASection() {
                       name="apellido"
                       type="text"
                       required
+                      minLength={1}
+                      maxLength={32}
+                      pattern="[A-Za-zÀ-ÖØ-öø-ÿ' \-]{1,32}"
+                      title={t.ctaSection.nameValidationHint}
                       autoComplete="family-name"
                       placeholder={t.ctaSection.placeholders.apellido}
                       value={form.apellido}
@@ -169,6 +177,9 @@ export function CTASection() {
                       name="telefono"
                       type="tel"
                       required
+                      inputMode="tel"
+                      pattern="\+?[0-9\s\-\(\)]{6,20}"
+                      title={t.ctaSection.phoneValidationHint}
                       autoComplete="tel"
                       placeholder={t.ctaSection.placeholders.telefono}
                       value={form.telefono}

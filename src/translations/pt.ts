@@ -261,6 +261,8 @@ const pt: Translations = {
     sending: 'Enviando...',
     errorMessage: 'Não conseguimos enviar seus dados. Tente novamente em alguns segundos.',
     planNotSpecified: 'Não especificado',
+    nameValidationHint: 'Somente letras, entre 1 e 32 caracteres.',
+    phoneValidationHint: 'Somente números de telefone, com ou sem código do país (ex: +55 11 91234-5678).',
     disclaimer: 'Ao enviar, você concorda que a Proactiva Salud entre em contato com informações do programa.',
     successTitle: 'Obrigado, {name}!',
     successMessage:
