@@ -22,7 +22,7 @@ export function CTASection() {
     email: '',
     telefono: '',
     ciudad: '',
-    plan: '',
+    plan: 'sin-definir',
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -198,11 +198,12 @@ export function CTASection() {
                   <select
                     id="plan"
                     name="plan"
+                    required
                     value={form.plan}
                     onChange={(e) => setForm((f) => ({ ...f, plan: e.target.value }))}
                     className={`${INPUT_BASE} appearance-none cursor-pointer`}
                   >
-                    <option value="">{t.ctaSection.planDefaultOption}</option>
+                    <option value="sin-definir">{t.ctaSection.planDefaultOption}</option>
                     {PLANS.map((plan) => (
                       <option key={plan.id} value={plan.id}>
                         {t.ctaSection.planOptionPrefix} {plan.name}
