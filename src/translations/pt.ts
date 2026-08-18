@@ -145,6 +145,8 @@ const pt: Translations = {
     title: 'Um plano para cada fase',
     description: 'Todos incluem teleconsultas a partir de casa.',
     perMonth: '/mês',
+    internationalNote: 'Valor internacional',
+    arsReference: '≈ {amount} pelo dólar oficial (venda)',
     cta: 'Garantir minha vaga',
     footnoteQuestion: 'Ainda tem dúvidas sobre qual escolher?',
     footnoteLink: 'Um consultor te orienta sem compromisso',

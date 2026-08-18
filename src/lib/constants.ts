@@ -8,7 +8,7 @@ export const PILLARS = [
 ] as const
 
 export const PLANS = [
-  { id: 'care', name: 'Care', price: 'USD 29,80', highlighted: false },
-  { id: 'plus', name: 'Plus', price: 'USD 59,90', highlighted: true },
-  { id: 'prime', name: 'Prime', price: 'USD 89,50', highlighted: false },
+  { id: 'care', name: 'Care', priceUSD: 29.80, highlighted: false },
+  { id: 'plus', name: 'Plus', priceUSD: 59.90, highlighted: true },
+  { id: 'prime', name: 'Prime', priceUSD: 89.50, highlighted: false },
 ] as const
