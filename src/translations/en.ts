@@ -145,6 +145,8 @@ const en: Translations = {
     title: 'A plan for every stage',
     description: 'All plans include teleconsultations from home.',
     perMonth: '/mo',
+    internationalNote: 'International rate',
+    arsReference: '≈ {amount} at the official ARS sell rate',
     cta: 'Claim my spot',
     footnoteQuestion: 'Not sure which one to choose?',
     footnoteLink: 'An advisor can guide you, no strings attached',

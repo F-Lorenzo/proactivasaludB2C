@@ -145,6 +145,8 @@ const es = {
     title: 'Un plan para cada etapa',
     description: 'Todos incluyen teleconsultas desde tu hogar.',
     perMonth: '/mes',
+    internationalNote: 'Valor internacional',
+    arsReference: '≈ {amount} al dólar oficial venta',
     cta: 'Solicitar mi lugar',
     footnoteQuestion: '¿Tenés dudas sobre cuál elegir?',
     footnoteLink: 'Un asesor te orienta sin compromiso',

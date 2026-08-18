@@ -4,9 +4,19 @@ import { Check } from 'lucide-react'
 import { PLANS } from '@/lib/constants'
 import { AnimateIn } from './ui/AnimateIn'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useDolarOficial } from '@/lib/useDolarOficial'
+
+function formatUSD(amount: number) {
+  return `USD ${amount.toFixed(2).replace('.', ',')}`
+}
+
+function formatARS(amount: number) {
+  return `AR$ ${Math.round(amount).toLocaleString('es-AR')}`
+}
 
 export function Plans() {
   const { t } = useLanguage()
+  const ventaOficial = useDolarOficial()
   const plans = PLANS.map((plan) => ({ ...plan, ...t.plans.items[plan.id] }))
 
   return (
@@ -75,7 +85,7 @@ export function Plans() {
                         plan.highlighted ? 'text-white' : 'text-ink'
                       }`}
                     >
-                      {plan.price}
+                      {formatUSD(plan.priceUSD)}
                     </span>
                     <span
                       className={`font-body text-sm ${
@@ -84,7 +94,26 @@ export function Plans() {
                     >
                       {t.plans.perMonth}
                     </span>
+                    <span
+                      className={`font-body text-[11px] ${
+                        plan.highlighted ? 'text-white/50' : 'text-ink-soft'
+                      }`}
+                    >
+                      ({t.plans.internationalNote})
+                    </span>
                   </p>
+                  {ventaOficial && (
+                    <p
+                      className={`font-body text-xs mt-1 ${
+                        plan.highlighted ? 'text-white/55' : 'text-ink-soft'
+                      }`}
+                    >
+                      {t.plans.arsReference.replace(
+                        '{amount}',
+                        formatARS(plan.priceUSD * ventaOficial)
+                      )}
+                    </p>
+                  )}
                 </div>
 
                 {/* Features */}
