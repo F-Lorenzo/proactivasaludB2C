@@ -197,9 +197,6 @@ const es = {
     titleLine2: 'este camino',
     description:
       'El Club +50 es el espacio de encuentro de todas las personas que eligen vivir esta etapa con más energía, propósito y conexión.',
-    membersLabel: 'Miembros del club',
-    andCountingLine1: 'y',
-    andCountingLine2: 'sumando',
     intro:
       'Ser parte del Club +50 significa tener un grupo humano que te acompaña, te entiende y comparte tus mismos objetivos de salud y bienestar.',
     features: [
