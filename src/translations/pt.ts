@@ -197,9 +197,6 @@ const pt: Translations = {
     titleLine2: 'nesse caminho',
     description:
       'O Clube +50 é o espaço de encontro de todas as pessoas que escolhem viver esta fase com mais energia, propósito e conexão.',
-    membersLabel: 'Membros do clube',
-    andCountingLine1: 'e',
-    andCountingLine2: 'contando',
     intro:
       'Fazer parte do Clube +50 significa ter um grupo de pessoas que te acompanha, te entende e compartilha seus mesmos objetivos de saúde e bem-estar.',
     features: [

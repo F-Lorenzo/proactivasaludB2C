@@ -7,39 +7,6 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 const FEATURE_ICONS = [Users, Heart, MessageCircle, Zap]
 
-const GALLERY = [
-  {
-    src: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=120&q=80',
-    alt: 'Hombre mayor de 58 de rasgos italo-argentinos',
-    name: 'Roberto, 58',
-    city: 'Buenos Aires',
-  },
-  {
-    src: '/graciela-avatar.jpg',
-    alt: 'Mujer mayor de 62 de rasgos italo-argentinos',
-    name: 'Graciela, 62',
-    city: 'Córdoba',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1544168190-79c17527004f?auto=format&fit=crop&w=120&q=80',
-    alt: 'Hombre mayor de 55 de rasgos europeos',
-    name: 'Carlos, 55',
-    city: 'Rosario',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=120&q=80',
-    alt: 'Hombre mayor de 60 de rasgos italo-argentinos',
-    name: 'Marcelo, 60',
-    city: 'Mendoza',
-  },
-  {
-    src: '/marta-avatar.jpg',
-    alt: 'Mujer mayor de 54 de rasgos europeos',
-    name: 'Marta, 54',
-    city: 'La Plata',
-  },
-]
-
 export function Testimonials() {
   const { t } = useLanguage()
   const features = t.testimonials.features.map((f, i) => ({ ...f, icon: FEATURE_ICONS[i] }))
@@ -103,42 +70,6 @@ export function Testimonials() {
                     className="object-cover object-top"
                     sizes="200px"
                   />
-                </div>
-              </div>
-            </AnimateIn>
-
-            {/* Community gallery */}
-            <AnimateIn delay={160}>
-              <div className="bg-white rounded-3xl p-6">
-                <p className="font-body text-xs text-ink-soft uppercase tracking-widest font-semibold mb-5">
-                  {t.testimonials.membersLabel}
-                </p>
-                <div className="flex items-center gap-3 flex-wrap">
-                  {GALLERY.map((person) => (
-                    <div key={person.name} className="flex flex-col items-center gap-1.5">
-                      <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-brand-light">
-                        <Image
-                          src={person.src}
-                          alt={person.alt}
-                          fill
-                          className="object-cover"
-                          sizes="56px"
-                        />
-                      </div>
-                      <div className="text-center">
-                        <p className="font-body text-xs font-semibold text-ink leading-tight">{person.name}</p>
-                        <p className="font-body text-[10px] text-ink-soft leading-tight">{person.city}</p>
-                      </div>
-                    </div>
-                  ))}
-                  <div className="flex flex-col items-center gap-1.5">
-                    <div className="w-14 h-14 rounded-full bg-brand-light flex items-center justify-center border-2 border-dashed border-brand/40">
-                      <span className="font-body text-brand font-bold text-lg leading-none">+50</span>
-                    </div>
-                    <p className="font-body text-xs text-ink-soft text-center leading-tight">
-                      {t.testimonials.andCountingLine1}<br />{t.testimonials.andCountingLine2}
-                    </p>
-                  </div>
                 </div>
               </div>
             </AnimateIn>

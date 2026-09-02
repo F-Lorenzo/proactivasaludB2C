@@ -197,9 +197,6 @@ const en: Translations = {
     titleLine2: 'this journey',
     description:
       'Club +50 is where everyone who chooses to live this stage with more energy, purpose and connection comes together.',
-    membersLabel: 'Club members',
-    andCountingLine1: 'and',
-    andCountingLine2: 'counting',
     intro:
       'Being part of Club +50 means having a group of people who support you, understand you and share your same health and wellness goals.',
     features: [
