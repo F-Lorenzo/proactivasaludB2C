@@ -84,15 +84,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* ── Positioning label ────────────────────────────────────────── */}
-      <div className="relative w-full bg-brand-dark px-6 lg:px-8 pb-8">
-        <div className="max-w-7xl mx-auto flex justify-center">
-          <span className="bg-brand text-white font-body text-sm lg:text-base font-semibold text-center rounded-full px-6 py-3 lg:px-8">
-            &ldquo;{t.hero.disclaimer}&rdquo;
-          </span>
-        </div>
-      </div>
-
       {/* Scroll indicator */}
       <div
         className="absolute bottom-24 left-1/2 -translate-x-1/2 text-white/50 animate-bounce hidden lg:block"

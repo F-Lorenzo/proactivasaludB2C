@@ -24,7 +24,6 @@ const en: Translations = {
     ctaSecondary: 'See the program',
     bannerBold: 'Talk to a professional today, from home.',
     bannerRest: 'No appointments, no waiting, with real follow-up.',
-    disclaimer: "This is not telemedicine — we don't replace medical care, we support your everyday wellbeing",
   },
 
   emotionalHook: {

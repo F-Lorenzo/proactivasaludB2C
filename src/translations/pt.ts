@@ -24,7 +24,6 @@ const pt: Translations = {
     ctaSecondary: 'Ver o programa',
     bannerBold: 'Fale com um profissional hoje, de casa.',
     bannerRest: 'Sem filas, sem espera, com acompanhamento real.',
-    disclaimer: 'Isto não é telemedicina, não substituímos o atendimento médico, acompanhamos o bem-estar diário',
   },
 
   emotionalHook: {
