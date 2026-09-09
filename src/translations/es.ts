@@ -24,6 +24,7 @@ const es = {
     ctaSecondary: 'Ver el programa',
     bannerBold: 'Hablá con un profesional hoy, desde tu casa.',
     bannerRest: 'Sin turnos, sin esperas, con seguimiento real.',
+    disclaimer: 'No es telemedicina, no reemplazamos la atención médica, acompañamos el bienestar diario',
   },
 
   emotionalHook: {
