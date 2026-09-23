@@ -146,7 +146,7 @@ const es = {
     description: 'Todos incluyen teleconsultas desde tu hogar.',
     perMonth: '/mes',
     internationalNote: 'Valor internacional',
-    arsReference: '≈ {amount} pesos argentinos',
+    currencyDisclaimer: 'Los precios en dólares corresponden a clientes fuera de Argentina.',
     cta: 'Solicitar mi lugar',
     footnoteQuestion: '¿Tenés dudas sobre cuál elegir?',
     footnoteLink: 'Un asesor te orienta sin compromiso',
