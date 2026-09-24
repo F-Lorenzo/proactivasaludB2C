@@ -35,11 +35,9 @@ export function Plans() {
             <p className="font-body text-ink-mid text-lg max-w-[46ch] mx-auto">
               {t.plans.description}
             </p>
-            {ventaOficial && (
-              <p className="font-body text-ink-soft text-xs mt-3">
-                {t.plans.currencyDisclaimer}
-              </p>
-            )}
+            <p className="font-body text-ink-soft text-xs mt-3">
+              {t.plans.currencyDisclaimer}
+            </p>
           </div>
         </AnimateIn>
 
@@ -90,7 +88,7 @@ export function Plans() {
                         plan.highlighted ? 'text-white' : 'text-ink'
                       }`}
                     >
-                      {ventaOficial ? formatARS(plan.priceUSD * ventaOficial) : formatUSD(plan.priceUSD)}
+                      {formatARS(plan.priceARS)}
                     </span>
                     <span
                       className={`font-body text-sm ${
@@ -99,15 +97,6 @@ export function Plans() {
                     >
                       {t.plans.perMonth}
                     </span>
-                    {!ventaOficial && (
-                      <span
-                        className={`font-body text-[11px] ${
-                          plan.highlighted ? 'text-white/50' : 'text-ink-soft'
-                        }`}
-                      >
-                        ({t.plans.internationalNote})
-                      </span>
-                    )}
                   </p>
                   {ventaOficial && (
                     <p
@@ -115,7 +104,7 @@ export function Plans() {
                         plan.highlighted ? 'text-white/60' : 'text-ink-soft'
                       }`}
                     >
-                      {formatUSD(plan.priceUSD)} {t.plans.perMonth} ({t.plans.internationalNote})
+                      {formatUSD(plan.priceARS / ventaOficial)} {t.plans.perMonth} ({t.plans.internationalNote})
                     </p>
                   )}
                 </div>

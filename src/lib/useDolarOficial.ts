@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 
 // Official USD→ARS sell rate ("dólar oficial venta"), used to show plan
-// prices (always billed in USD) as an approximate ARS reference.
+// prices (always billed in ARS) as an approximate USD reference.
 // https://dolarapi.com/docs/argentina/operations/get-dolar-oficial.html
 export function useDolarOficial() {
   const [venta, setVenta] = useState<number | null>(null)

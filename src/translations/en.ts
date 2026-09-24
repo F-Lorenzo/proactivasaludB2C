@@ -146,7 +146,7 @@ const en: Translations = {
     description: 'All plans include teleconsultations from home.',
     perMonth: '/mo',
     internationalNote: 'International rate',
-    currencyDisclaimer: 'USD pricing applies to clients outside Argentina.',
+    currencyDisclaimer: 'Prices are billed in Argentine pesos. The USD amount is an approximate reference.',
     cta: 'Claim my spot',
     footnoteQuestion: 'Not sure which one to choose?',
     footnoteLink: 'An advisor can guide you, no strings attached',

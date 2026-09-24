@@ -146,7 +146,7 @@ const pt: Translations = {
     description: 'Todos incluem teleconsultas a partir de casa.',
     perMonth: '/mês',
     internationalNote: 'Valor internacional',
-    currencyDisclaimer: 'Os preços em dólares correspondem a clientes fora da Argentina.',
+    currencyDisclaimer: 'Os preços são cobrados em pesos argentinos. O valor em USD é uma referência aproximada.',
     cta: 'Garantir minha vaga',
     footnoteQuestion: 'Ainda tem dúvidas sobre qual escolher?',
     footnoteLink: 'Um consultor te orienta sem compromisso',
